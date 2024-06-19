@@ -1,8 +1,8 @@
 export default [
   {
     id: 'mattmezza',
-    name: 'Matteo',
-    imageUrl: 'https://avatars3.githubusercontent.com/u/1915989?s=230&v=4'
+    name: 'Assistant',
+    imageUrl: 'https://cdppgraderfrontend.blob.core.windows.net/images/boticon.svg'
   },
   {
     id: 'support',
