@@ -355,6 +355,7 @@ export default {
 .sc-user-input:focus-within {
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Tailwind's primary-blue-50a */
   outline: none;
+  border: none;
 
 }
 .sc-user-input--text {

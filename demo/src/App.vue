@@ -104,6 +104,7 @@
       :message-styling="messageStyling"
       :on-message="sendMessage"
       :on-typing="handleTyping"
+      ref="inputBox"
     />
     <Footer :chosen-color="chosenColor" :colors="colors" />
   </div>
