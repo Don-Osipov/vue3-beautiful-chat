@@ -349,7 +349,6 @@ export default {
   border: 1px solid #d1d5db; /* Tailwind's gray-300 */
   background-color: #ffffff;
   cursor: text;
-  margin-bottom: 1rem; /* 16px */
   box-sizing: border-box;
 }
 
