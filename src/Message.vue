@@ -168,7 +168,7 @@ export default {
   align-self: center;
   margin-right: 8px;
   background-color: #1677FF;
-  justify-self: start;
+  align-self: start;
 }
 
 .sc-message--avatar-img {
