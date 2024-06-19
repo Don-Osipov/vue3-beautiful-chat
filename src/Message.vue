@@ -162,16 +162,19 @@ export default {
 }
 
 .sc-message--avatar {
-  width: 45px;
-  height: 45px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   align-self: center;
   margin-right: 8px;
+  background-color: #1677FF;
 }
 
 .sc-message--avatar-img {
-  height: 100%;
-  width: 100%;
+  height: 40px;  // Fixed height
+  width: 40px;   // Fixed width
+  object-fit: cover;  // Maintain aspect ratio without distortion
+  border-radius: 50%;  // Ensures the image is always circular
 }
 
 .sc-message--meta {

@@ -165,6 +165,7 @@ export default {
           id: Math.random(),
           data: {text}
         })
+        this.$refs.inputBox.value = ''
       }
     },
     handleTyping(text) {
