@@ -349,6 +349,8 @@ export default {
   border: 1px solid #d1d5db; /* Tailwind's gray-300 */
   background-color: #ffffff;
   cursor: text;
+  margin-bottom: .6rem; 
+  margin-top: .6rem; 
   box-sizing: border-box;
 }
 
