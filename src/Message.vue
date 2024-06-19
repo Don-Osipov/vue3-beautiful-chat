@@ -14,10 +14,10 @@
           v-tooltip="authorName"
           :title="authorName"
           class="sc-message--avatar"
-          :style="{
-            backgroundImage: `url(${chatImageUrl})`
-          }"
-        ></div>
+
+        >
+      <img src="./assets/boticon.svg" class="sc-message--avatar-img"/>
+      </div>
       </slot>
 
       <TextMessage
@@ -132,7 +132,7 @@ export default {
 
 <style lang="scss">
 .sc-message {
-  width: 300px;
+  width: 90%;
   margin: auto;
   padding-bottom: 10px;
   display: flex;
@@ -162,14 +162,16 @@ export default {
 }
 
 .sc-message--avatar {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  min-width: 30px;
-  min-height: 30px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   align-self: center;
-  margin-right: 15px;
+  margin-right: 8px;
+}
+
+.sc-message--avatar-img {
+  height: 100%;
+  width: 100%;
 }
 
 .sc-message--meta {

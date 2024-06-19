@@ -350,6 +350,7 @@ export default {
   background-color: #ffffff;
   cursor: text;
   margin-bottom: 1rem; /* 16px */
+  box-sizing: border-box;
 }
 
 .sc-user-input:focus-within {

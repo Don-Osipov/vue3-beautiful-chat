@@ -38,11 +38,11 @@ const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
   "stroke-linecap": "round",
   "stroke-linejoin": "round"
 }, null, -1);
-const _hoisted_3$b = [
+const _hoisted_3$c = [
   _hoisted_2$d
 ];
 function _sfc_render$m(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$m, _hoisted_3$b);
+  return openBlock(), createElementBlock("svg", _hoisted_1$m, _hoisted_3$c);
 }
 var CloseIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
 var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
@@ -126,7 +126,7 @@ const _sfc_main$l = {
 };
 const _hoisted_1$l = ["width", "height", "aria-labelledby"];
 const _hoisted_2$c = ["id"];
-const _hoisted_3$a = ["fill"];
+const _hoisted_3$b = ["fill"];
 function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -142,7 +142,7 @@ function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
     }, toDisplayString($props.iconName), 9, _hoisted_2$c),
     createElementVNode("g", { fill: $props.iconColor }, [
       renderSlot(_ctx.$slots, "default", {}, void 0, true)
-    ], 8, _hoisted_3$a)
+    ], 8, _hoisted_3$b)
   ], 8, _hoisted_1$l);
 }
 var IconBase = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__scopeId", "data-v-e63be5a6"]]);
@@ -1647,8 +1647,8 @@ const _sfc_main$i = {
 };
 const _hoisted_1$i = ["disabled"];
 const _hoisted_2$b = { key: 1 };
-const _hoisted_3$9 = ["innerHTML"];
-const _hoisted_4$3 = {
+const _hoisted_3$a = ["innerHTML"];
+const _hoisted_4$4 = {
   key: 1,
   class: "sc-message--edited"
 };
@@ -1715,13 +1715,13 @@ function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
       createElementVNode("p", {
         class: "sc-message--text-content",
         innerHTML: $options.messageText
-      }, null, 8, _hoisted_3$9),
+      }, null, 8, _hoisted_3$a),
       $props.message.data.meta ? (openBlock(), createElementBlock("p", {
         key: 0,
         class: "sc-message--meta",
         style: normalizeStyle({ color: $props.messageColors.color })
       }, toDisplayString($props.message.data.meta), 5)) : createCommentVNode("", true),
-      $props.message.isEdited ? (openBlock(), createElementBlock("p", _hoisted_4$3, [
+      $props.message.isEdited ? (openBlock(), createElementBlock("p", _hoisted_4$4, [
         createVNode(_component_IconBase, {
           width: "10",
           "icon-name": "edited"
@@ -1752,7 +1752,7 @@ const _sfc_main$h = {
 };
 const _hoisted_1$h = { class: "sc-message--file-icon" };
 const _hoisted_2$a = ["src"];
-const _hoisted_3$8 = ["href"];
+const _hoisted_3$9 = ["href"];
 function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "sc-message--file",
@@ -1771,7 +1771,7 @@ function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
       createElementVNode("a", {
         href: $props.data.file.url ? $props.data.file.url : "#",
         target: "_blank"
-      }, toDisplayString($props.data.file.name || ""), 9, _hoisted_3$8)
+      }, toDisplayString($props.data.file.name || ""), 9, _hoisted_3$9)
     ], 4),
     createElementVNode("div", {
       class: "sc-message--file-text",
@@ -1813,17 +1813,17 @@ const _sfc_main$f = {
 const _withScopeId = (n) => (pushScopeId("data-v-244d06fe"), n = n(), popScopeId(), n);
 const _hoisted_1$f = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
 const _hoisted_2$9 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
-const _hoisted_3$7 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
-const _hoisted_4$2 = [
+const _hoisted_3$8 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _hoisted_4$3 = [
   _hoisted_1$f,
   _hoisted_2$9,
-  _hoisted_3$7
+  _hoisted_3$8
 ];
 function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "sc-typing-indicator",
     style: normalizeStyle($props.messageColors)
-  }, _hoisted_4$2, 4);
+  }, _hoisted_4$3, 4);
 }
 var TypingMessage = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__scopeId", "data-v-244d06fe"]]);
 var SystemMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
@@ -1856,6 +1856,7 @@ function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
 }
 var SystemMessage = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__scopeId", "data-v-0c1d322a"]]);
 var chatIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSItNDc0OS40OCAtNTAyMCAzNS4wMzYgMzUuMDM2Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO30uYntmaWxsOiM0ZThjZmY7fS5je2NsaXAtcGF0aDp1cmwoI2EpO30uZHtmaWxsOiNmZmY7fS5le2ZpbGw6I2VmZjRmOTt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGNsYXNzPSJhIiBkPSJNMC0zOTkuNDc5SDE3LjU1NXYxNy41NTVIMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMzk5LjQ3OSkiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDg4NiAtNTA3NSkiPjxjaXJjbGUgY2xhc3M9ImIiIGN4PSIxNy41MTgiIGN5PSIxNy41MTgiIHI9IjE3LjUxOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM2LjUyIDU1KSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0NS4xMyA2NCkiPjxnIGNsYXNzPSJjIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIj48cGF0aCBjbGFzcz0iZCIgZD0iTS0zODEuOTI0LTE5MC45NjJhOC43NzgsOC43NzgsMCwwLDAtOC43NzgtOC43NzgsOC43NzgsOC43NzgsMCwwLDAtOC43NzgsOC43NzgsOC43NDUsOC43NDUsMCwwLDAsMi4yNiw1Ljg3OXYxLjQ0MmMwLC44LjQ5MiwxLjQ1NywxLjEsMS40NTdoNS44M2EuODQzLjg0MywwLDAsMCwuMTgzLS4wMiw4Ljc3OCw4Ljc3OCwwLDAsMCw4LjE4NC04Ljc1NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzk5LjQ3OSAxOTkuNzQpIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPjxwYXRoIGNsYXNzPSJlIiBkPSJNLTY4Ljc2My0xOTQuMDc5YTkuMjkyLDkuMjkyLDAsMCwxLDYuMzgtOC44ODhjLS4yNTItLjAyMi0uNTA2LS4wMzMtLjc2My0uMDMzYTguNzc0LDguNzc0LDAsMCwwLTguNzc4LDguNzc4QTkuNTA4LDkuNTA4LDAsMCwwLTY5LjctMTg4LjNjLjAwNSwwLDAsLjAwOSwwLC4wMS0uMzExLjM1Mi0xLjkyNCwyLjg0OS4wMjEsMi44NDloMi4yNWMtMS4yMy0uMDIyLDEuMjYzLTIuMTA3LjI2OS0zLjQ5NGE4LjIyNSw4LjIyNSwwLDAsMS0xLjYtNS4xNDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcxLjkyNCAyMDMpIi8+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==";
+var _imports_0 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9IiMxNjc3RkYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOS44MTg0IDE2LjY2MDZDMTkuODE4NCAxNi4xNzUyIDIwLjIyMjMgMTUuNzgxNyAyMC43MjA1IDE1Ljc4MTdIMjUuMDAwNkMyNS40OTg4IDE1Ljc4MTcgMjUuOTAyNyAxNi4xNzUyIDI1LjkwMjcgMTYuNjYwNlYyMC44MzAzQzI1LjkwMjcgMjEuMzE1NyAyNS40OTg4IDIxLjcwOTIgMjUuMDAwNiAyMS43MDkyQzI0LjUwMjMgMjEuNzA5MiAyNC4wOTg0IDIxLjMxNTcgMjQuMDk4NCAyMC44MzAzVjE3LjUzOTZIMjAuNzIwNUMyMC4yMjIzIDE3LjUzOTYgMTkuODE4NCAxNy4xNDYxIDE5LjgxODQgMTYuNjYwNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNTc5OCAyMS43MDk1QzE3Ljg5NjEgMjEuNzA5NSAxNy4zNDE5IDIyLjI0OTQgMTcuMzQxOSAyMi45MTU0VjMxLjI1NDhDMTcuMzQxOSAzMS45MjA4IDE3Ljg5NjEgMzIuNDYwNyAxOC41Nzk4IDMyLjQ2MDdIMzEuNDE5OUMzMi4xMDM2IDMyLjQ2MDcgMzIuNjU3OCAzMS45MjA4IDMyLjY1NzggMzEuMjU0OFYyMi45MTU0QzMyLjY1NzggMjIuMjQ5NCAzMi4xMDM2IDIxLjcwOTUgMzEuNDE5OSAyMS43MDk1SDE4LjU3OThaTTE1LjUzNzYgMjIuOTE1NEMxNS41Mzc2IDIxLjI3ODYgMTYuODk5NiAxOS45NTE3IDE4LjU3OTggMTkuOTUxN0gzMS40MTk5QzMzLjEwMDEgMTkuOTUxNyAzNC40NjIxIDIxLjI3ODYgMzQuNDYyMSAyMi45MTU0VjMxLjI1NDhDMzQuNDYyMSAzMi44OTE2IDMzLjEwMDEgMzQuMjE4NiAzMS40MTk5IDM0LjIxODZIMTguNTc5OEMxNi44OTk2IDM0LjIxODYgMTUuNTM3NiAzMi44OTE2IDE1LjUzNzYgMzEuMjU0OFYyMi45MTU0WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMS43OTAyIDI1LjE2MzZDMjIuMjg4NSAyNS4xNjM2IDIyLjY5MjQgMjUuNTU3MSAyMi42OTI0IDI2LjA0MjVWMjguMTI3M0MyMi42OTI0IDI4LjYxMjcgMjIuMjg4NSAyOS4wMDYyIDIxLjc5MDIgMjkuMDA2MkMyMS4yOTE5IDI5LjAwNjIgMjAuODg4IDI4LjYxMjcgMjAuODg4IDI4LjEyNzNWMjYuMDQyNUMyMC44ODggMjUuNTU3MSAyMS4yOTE5IDI1LjE2MzYgMjEuNzkwMiAyNS4xNjM2Wk0yOC4yMTAzIDI1LjE2MzZDMjguNzA4NSAyNS4xNjM2IDI5LjExMjQgMjUuNTU3MSAyOS4xMTI0IDI2LjA0MjVWMjguMTI3M0MyOS4xMTI0IDI4LjYxMjcgMjguNzA4NSAyOS4wMDYyIDI4LjIxMDMgMjkuMDA2MkMyNy43MTIgMjkuMDA2MiAyNy4zMDgxIDI4LjYxMjcgMjcuMzA4MSAyOC4xMjczVjI2LjA0MjVDMjcuMzA4MSAyNS41NTcxIDI3LjcxMiAyNS4xNjM2IDI4LjIxMDMgMjUuMTYzNlpNMTMuMzk3OSAyNy4wODQ5QzEzLjM5NzkgMjYuNTk5NSAxMy44MDE5IDI2LjIwNiAxNC4zMDAxIDI2LjIwNkgxNi40NDAxQzE2LjkzODQgMjYuMjA2IDE3LjM0MjMgMjYuNTk5NSAxNy4zNDIzIDI3LjA4NDlDMTcuMzQyMyAyNy41NzAzIDE2LjkzODQgMjcuOTYzOCAxNi40NDAxIDI3Ljk2MzhIMTQuMzAwMUMxMy44MDE5IDI3Ljk2MzggMTMuMzk3OSAyNy41NzAzIDEzLjM5NzkgMjcuMDg0OVpNMzIuNjU4MiAyNy4wODQ5QzMyLjY1ODIgMjYuNTk5NSAzMy4wNjIxIDI2LjIwNiAzMy41NjAzIDI2LjIwNkgzNS43MDA0QzM2LjE5ODYgMjYuMjA2IDM2LjYwMjUgMjYuNTk5NSAzNi42MDI1IDI3LjA4NDlDMzYuNjAyNSAyNy41NzAzIDM2LjE5ODYgMjcuOTYzOCAzNS43MDA0IDI3Ljk2MzhIMzMuNTYwM0MzMy4wNjIxIDI3Ljk2MzggMzIuNjU4MiAyNy41NzAzIDMyLjY1ODIgMjcuMDg0OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=";
 var Message_vue_vue_type_style_index_0_lang = "";
 const _sfc_main$d = {
   components: {
@@ -1917,6 +1918,13 @@ const _sfc_main$d = {
 };
 const _hoisted_1$e = ["id"];
 const _hoisted_2$8 = ["title"];
+const _hoisted_3$7 = /* @__PURE__ */ createElementVNode("img", {
+  src: _imports_0,
+  class: "sc-message--avatar-img"
+}, null, -1);
+const _hoisted_4$2 = [
+  _hoisted_3$7
+];
 function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_TextMessage = resolveComponent("TextMessage");
   const _component_EmojiMessage = resolveComponent("EmojiMessage");
@@ -1942,11 +1950,8 @@ function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
         $props.message.type !== "system" && $options.authorName && $options.authorName !== "me" ? withDirectives((openBlock(), createElementBlock("div", {
           key: 0,
           title: $options.authorName,
-          class: "sc-message--avatar",
-          style: normalizeStyle({
-            backgroundImage: `url(${$options.chatImageUrl})`
-          })
-        }, null, 12, _hoisted_2$8)), [
+          class: "sc-message--avatar"
+        }, _hoisted_4$2, 8, _hoisted_2$8)), [
           [_directive_tooltip, $options.authorName]
         ]) : createCommentVNode("", true)
       ]),
