@@ -2,14 +2,17 @@
   <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}">
 
     <div v-if="showCloseButton" class="sc-header--close-button" @click="$emit('close')">
-      <img :src="icons.close.img" :alt="icons.close.name" />
+      <CloseIconSvg/>
     </div>
   </div>
 </template>
 
+<script setup>
+import CloseIconSvg from './assets/x-close.vue'
+</script>
+
 <script>
 import {mapState} from './store/'
-import CloseIcon from './assets/close-icon-big.png'
 
 export default {
   props: {
@@ -18,7 +21,7 @@ export default {
       default: function () {
         return {
           close: {
-            img: CloseIcon,
+            img: CloseIconSvg, // Changed from CloseIcon to CloseIconSvg
             name: 'default'
           }
         }
@@ -52,7 +55,7 @@ export default {
 
 <style scoped>
 .sc-header {
-  min-height: 75px;
+  min-height: 45px;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
   padding: 10px;
@@ -86,9 +89,11 @@ export default {
 }
 
 .sc-header--close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
-  align-self: center;
-  height: 40px;
+  height: 100%;
   margin-right: 10px;
   box-sizing: border-box;
   cursor: pointer;
@@ -96,16 +101,12 @@ export default {
   margin-left: auto;
 }
 
+
 .sc-header--close-button:hover {
   box-shadow: 0px 2px 5px rgba(0.2, 0.2, 0.5, 0.1);
 }
 
-.sc-header--close-button img {
-  width: 100%;
-  height: 100%;
-  padding: 13px;
-  box-sizing: border-box;
-}
+
 
 @media (max-width: 450px) {
   .sc-header {

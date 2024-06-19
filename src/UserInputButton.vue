@@ -1,17 +1,17 @@
 <template>
   <button class="sc-user-input--button-icon-wrapper">
-    <IconBase :color="color" width="20" height="20" :icon-name="tooltip">
+    <IconUpload :color="color" class="sc-user-input--button-icon" :icon-name="tooltip">
       <slot />
-    </IconBase>
+    </IconUpload>
   </button>
 </template>
 
 <script>
-import IconBase from './components/IconBase.vue'
+import IconUpload from './assets/icon-upload.vue'
 
 export default {
   components: {
-    IconBase
+    IconUpload
   },
   props: {
     color: {
@@ -28,11 +28,16 @@ export default {
 
 <style scoped>
 .sc-user-input--button-icon-wrapper {
-  background: none;
+  background: #D4DCE8;
+  border-radius: 3px;
   border: none;
   padding: 0px;
   margin: 0px;
   outline: none;
   cursor: pointer;
+}
+
+.sc-user-input--button-icon {
+
 }
 </style>

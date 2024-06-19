@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sc-user-input-wrap">
     <div
       v-if="file"
       class="file-container"
@@ -40,13 +40,7 @@
         @focusUserInput="focusUserInput()"
       ></div>
       <div class="sc-user-input--buttons">
-        <div class="sc-user-input--button"></div>
-        <div v-if="showEmoji && !isEditing" class="sc-user-input--button">
-          <EmojiIcon :on-emoji-picked="_handleEmojiPicked" :color="colors.userInput.text" />
-        </div>
-        <div v-if="showFile && !isEditing" class="sc-user-input--button">
-          <FileIcons :on-change="_handleFileSubmit" :color="colors.userInput.text" />
-        </div>
+        
         <div v-if="isEditing" class="sc-user-input--button">
           <UserInputButton
             :color="colors.userInput.text"
@@ -85,7 +79,7 @@ import FileIcons from './icons/FileIcons.vue'
 import UserInputButton from './UserInputButton.vue'
 import Suggestions from './Suggestions.vue'
 import FileIcon from './assets/file.svg'
-import CloseIconSvg from './assets/close.svg'
+import CloseIconSvg from './assets/x-close.vue'
 import store from './store/'
 import IconCross from './components/icons/IconCross.vue'
 import IconOk from './components/icons/IconOk.vue'
@@ -338,78 +332,91 @@ export default {
 </script>
 
 <style>
-.sc-user-input {
-  min-height: 55px;
-  margin: 0px;
-  position: relative;
-  bottom: 0;
+.sc-user-input-wrap {
   display: flex;
-  background-color: #f4f7f9;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.sc-user-input--text {
-  width: 300px;
-  resize: none;
-  border: none;
-  outline: none;
-  border-bottom-left-radius: 10px;
-  box-sizing: border-box;
-  padding: 18px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.33;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  color: #565867;
-  -webkit-font-smoothing: antialiased;
-  max-height: 200px;
-  overflow: scroll;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.sc-user-input--text:empty:before {
-  content: attr(placeholder);
-  display: block; /* For Firefox */
-  /* color: rgba(86, 88, 103, 0.3); */
-  filter: contrast(15%);
-  outline: none;
-  cursor: text;
-}
-
-.sc-user-input--buttons {
-  width: 100px;
-  position: absolute;
-  right: 30px;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.sc-user-input--button:first-of-type {
-  width: 40px;
-}
-
-.sc-user-input--button {
-  width: 30px;
-  height: 55px;
-  margin-left: 2px;
-  margin-right: 2px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.sc-user-input.active {
+
+.sc-user-input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  border-radius: 1rem; /* 16px */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #d1d5db; /* Tailwind's gray-300 */
+  background-color: #ffffff;
+  cursor: text;
+  margin-bottom: 1rem; /* 16px */
+}
+
+.sc-user-input:focus-within {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Tailwind's primary-blue-50a */
+  outline: none;
+
+}
+.sc-user-input--text {
+  flex: 1;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+  padding-top: 0.5rem; /* 8px */
+  padding-bottom: 0.5rem; /* 8px */
+  border-radius: 1rem 0 0 1rem; /* 16px */
+  outline: none;
+  box-sizing: border-box;
+}
+
+.focus-within\\:ring-2:focus-within {
+  box-shadow: 0 0 0 2px rgba(22, 119, 255, .5);
+}
+
+.focus-within\\:outline-none:focus-within {
+  outline: none;
+}
+
+
+.sc-user-input--buttons {
+  width: 30px;
+  height: 30px;
+  margin: 6px 12px 6px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sc-user-input--button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sc-user-input--button-icon-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.sc-user-input--button-icon {
+  height: 28px;
+  width: 28px;
+
+}
+
+/* .sc-user-input.active {
   box-shadow: none;
   background-color: white;
   box-shadow: 0px -5px 20px 0px rgba(150, 165, 190, 0.2);
-}
-
+} */
+/* 
 .sc-user-input--button label {
   position: relative;
   height: 24px;
@@ -431,7 +438,7 @@ export default {
   opacity: 0;
   cursor: pointer;
   overflow: hidden;
-}
+} */
 
 .file-container {
   background-color: #f4f7f9;

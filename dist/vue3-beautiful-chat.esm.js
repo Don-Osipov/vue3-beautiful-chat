@@ -1,4 +1,4 @@
-import { reactive, openBlock, createElementBlock, normalizeStyle, createElementVNode, createCommentVNode, toDisplayString, renderSlot, resolveComponent, createVNode, withCtx, createTextVNode, pushScopeId, popScopeId, resolveDirective, normalizeClass, withDirectives, createBlock, Fragment, renderList, vShow, withModifiers, nextTick, withScopeId, withKeys, mergeProps, ref, createApp, h } from "vue";
+import { reactive, openBlock, createElementBlock, createElementVNode, normalizeStyle, createVNode, createCommentVNode, toDisplayString, renderSlot, resolveComponent, withCtx, createTextVNode, pushScopeId, popScopeId, resolveDirective, normalizeClass, withDirectives, createBlock, Fragment, renderList, vShow, withModifiers, nextTick, withScopeId, withKeys, mergeProps, ref, createApp, h } from "vue";
 const store = {
   state: reactive({
     editMessage: null
@@ -16,8 +16,6 @@ function mapState(keys) {
   });
   return map;
 }
-var CloseIcon$1 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAfCAMAAACxiD++AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUxpcf///////////////////////////////////////////////////////3EAnbYAAAAOdFJOUwADZ66SoQjEhnS7/gsNGQL7+wAAAKtJREFUKM+F01sOhCAQRNESFV/I/pc70Og0YJfyJbmHhBAbGGYHstw8IPV4EOGOmERYIhGpxyUAJxHSz/xlC+1FxE64qB1yj1ZID7oXsel+63ovnj2JXUXue+hvrcLugL+EdG+9XBG8X+Kl34J3YM1g/egvIvdx5EK691RIz78YEXdnQrst6m6JqemXmNo+D/WJNAyVePZWWL0WdlfB+l+UAQQReaAc65DB/wGsZgzLN0IQWAAAAABJRU5ErkJggg==";
-var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -25,14 +23,37 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$l = {
+const _sfc_main$n = {};
+const _hoisted_1$m = {
+  width: "18",
+  height: "19",
+  viewBox: "0 0 18 19",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg"
+};
+const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
+  d: "M13.5 5L4.5 14M4.5 5L13.5 14",
+  stroke: "#374151",
+  "stroke-width": "1.5",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}, null, -1);
+const _hoisted_3$b = [
+  _hoisted_2$d
+];
+function _sfc_render$m(_ctx, _cache) {
+  return openBlock(), createElementBlock("svg", _hoisted_1$m, _hoisted_3$b);
+}
+var CloseIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
+var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
+const __default__ = {
   props: {
     icons: {
       type: Object,
       default: function() {
         return {
           close: {
-            img: CloseIcon$1,
+            img: CloseIconSvg,
             name: "default"
           }
         };
@@ -62,27 +83,28 @@ const _sfc_main$l = {
     }
   }
 };
-const _hoisted_1$l = ["src", "alt"];
-function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", {
-    class: "sc-header",
-    style: normalizeStyle({ background: $props.colors.header.bg, color: $props.colors.header.text })
-  }, [
-    _ctx.showCloseButton ? (openBlock(), createElementBlock("div", {
-      key: 0,
-      class: "sc-header--close-button",
-      onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("close"))
-    }, [
-      createElementVNode("img", {
-        src: $props.icons.close.img,
-        alt: $props.icons.close.name
-      }, null, 8, _hoisted_1$l)
-    ])) : createCommentVNode("", true)
-  ], 4);
-}
-var Header = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__scopeId", "data-v-2b1cc527"]]);
+const _sfc_main$m = Object.assign(__default__, {
+  __name: "Header",
+  setup(__props) {
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", {
+        class: "sc-header",
+        style: normalizeStyle({ background: __props.colors.header.bg, color: __props.colors.header.text })
+      }, [
+        _ctx.showCloseButton ? (openBlock(), createElementBlock("div", {
+          key: 0,
+          class: "sc-header--close-button",
+          onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("close"))
+        }, [
+          createVNode(CloseIconSvg)
+        ])) : createCommentVNode("", true)
+      ], 4);
+    };
+  }
+});
+var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-0f18a98a"]]);
 var IconBase_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$k = {
+const _sfc_main$l = {
   props: {
     iconName: {
       type: String,
@@ -102,10 +124,10 @@ const _sfc_main$k = {
     }
   }
 };
-const _hoisted_1$k = ["width", "height", "aria-labelledby"];
-const _hoisted_2$b = ["id"];
-const _hoisted_3$9 = ["fill"];
-function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
+const _hoisted_1$l = ["width", "height", "aria-labelledby"];
+const _hoisted_2$c = ["id"];
+const _hoisted_3$a = ["fill"];
+function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: $props.width,
@@ -117,25 +139,25 @@ function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     createElementVNode("title", {
       id: $props.iconName,
       lang: "en"
-    }, toDisplayString($props.iconName), 9, _hoisted_2$b),
+    }, toDisplayString($props.iconName), 9, _hoisted_2$c),
     createElementVNode("g", { fill: $props.iconColor }, [
       renderSlot(_ctx.$slots, "default", {}, void 0, true)
-    ], 8, _hoisted_3$9)
-  ], 8, _hoisted_1$k);
+    ], 8, _hoisted_3$a)
+  ], 8, _hoisted_1$l);
 }
-var IconBase = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k], ["__scopeId", "data-v-e63be5a6"]]);
+var IconBase = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__scopeId", "data-v-e63be5a6"]]);
+const _sfc_main$k = {};
+const _hoisted_1$k = { d: "M19.404,6.65l-5.998-5.996c-0.292-0.292-0.765-0.292-1.056,0l-2.22,2.22l-8.311,8.313l-0.003,0.001v0.003l-0.161,0.161c-0.114,0.112-0.187,0.258-0.21,0.417l-1.059,7.051c-0.035,0.233,0.044,0.47,0.21,0.639c0.143,0.14,0.333,0.219,0.528,0.219c0.038,0,0.073-0.003,0.111-0.009l7.054-1.055c0.158-0.025,0.306-0.098,0.417-0.211l8.478-8.476l2.22-2.22C19.695,7.414,19.695,6.941,19.404,6.65z M8.341,16.656l-0.989-0.99l7.258-7.258l0.989,0.99L8.341,16.656z M2.332,15.919l0.411-2.748l4.143,4.143l-2.748,0.41L2.332,15.919z M13.554,7.351L6.296,14.61l-0.849-0.848l7.259-7.258l0.423,0.424L13.554,7.351zM10.658,4.457l0.992,0.99l-7.259,7.258L3.4,11.715L10.658,4.457z M16.656,8.342l-1.517-1.517V6.823h-0.003l-0.951-0.951l-2.471-2.471l1.164-1.164l4.942,4.94L16.656,8.342z" };
+function _sfc_render$k(_ctx, _cache) {
+  return openBlock(), createElementBlock("path", _hoisted_1$k);
+}
+var IconEdit = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$k]]);
 const _sfc_main$j = {};
-const _hoisted_1$j = { d: "M19.404,6.65l-5.998-5.996c-0.292-0.292-0.765-0.292-1.056,0l-2.22,2.22l-8.311,8.313l-0.003,0.001v0.003l-0.161,0.161c-0.114,0.112-0.187,0.258-0.21,0.417l-1.059,7.051c-0.035,0.233,0.044,0.47,0.21,0.639c0.143,0.14,0.333,0.219,0.528,0.219c0.038,0,0.073-0.003,0.111-0.009l7.054-1.055c0.158-0.025,0.306-0.098,0.417-0.211l8.478-8.476l2.22-2.22C19.695,7.414,19.695,6.941,19.404,6.65z M8.341,16.656l-0.989-0.99l7.258-7.258l0.989,0.99L8.341,16.656z M2.332,15.919l0.411-2.748l4.143,4.143l-2.748,0.41L2.332,15.919z M13.554,7.351L6.296,14.61l-0.849-0.848l7.259-7.258l0.423,0.424L13.554,7.351zM10.658,4.457l0.992,0.99l-7.259,7.258L3.4,11.715L10.658,4.457z M16.656,8.342l-1.517-1.517V6.823h-0.003l-0.951-0.951l-2.471-2.471l1.164-1.164l4.942,4.94L16.656,8.342z" };
+const _hoisted_1$j = { d: "M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z" };
 function _sfc_render$j(_ctx, _cache) {
   return openBlock(), createElementBlock("path", _hoisted_1$j);
 }
-var IconEdit = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j]]);
-const _sfc_main$i = {};
-const _hoisted_1$i = { d: "M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z" };
-function _sfc_render$i(_ctx, _cache) {
-  return openBlock(), createElementBlock("path", _hoisted_1$i);
-}
-var IconCross = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i]]);
+var IconCross = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j]]);
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 var escapeGoat = {};
 (function(exports) {
@@ -1559,7 +1581,7 @@ var msgdown = (text, tokens = defaultTokens) => {
   return html;
 };
 var TextMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$h = {
+const _sfc_main$i = {
   components: {
     IconBase,
     IconCross,
@@ -1623,14 +1645,14 @@ const _sfc_main$h = {
     }
   }
 };
-const _hoisted_1$h = ["disabled"];
-const _hoisted_2$a = { key: 1 };
-const _hoisted_3$8 = ["innerHTML"];
+const _hoisted_1$i = ["disabled"];
+const _hoisted_2$b = { key: 1 };
+const _hoisted_3$9 = ["innerHTML"];
 const _hoisted_4$3 = {
   key: 1,
   class: "sc-message--edited"
 };
-function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_IconEdit = resolveComponent("IconEdit");
   const _component_IconBase = resolveComponent("IconBase");
   const _component_IconCross = resolveComponent("IconCross");
@@ -1657,8 +1679,8 @@ function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
           ]),
           _: 1
         }, 8, ["color"])
-      ], 8, _hoisted_1$h)) : createCommentVNode("", true),
-      _ctx.showDeletion ? (openBlock(), createElementBlock("div", _hoisted_2$a, [
+      ], 8, _hoisted_1$i)) : createCommentVNode("", true),
+      _ctx.showDeletion ? (openBlock(), createElementBlock("div", _hoisted_2$b, [
         $options.me && $props.message.id != null && $props.message.id != void 0 ? (openBlock(), createElementBlock("button", {
           key: 0,
           onClick: _cache[1] || (_cache[1] = ($event) => $options.ifelse(
@@ -1693,7 +1715,7 @@ function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
       createElementVNode("p", {
         class: "sc-message--text-content",
         innerHTML: $options.messageText
-      }, null, 8, _hoisted_3$8),
+      }, null, 8, _hoisted_3$9),
       $props.message.data.meta ? (openBlock(), createElementBlock("p", {
         key: 0,
         class: "sc-message--meta",
@@ -1714,9 +1736,9 @@ function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     ], true)
   ], 4);
 }
-var TextMessage = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-784eb559"]]);
+var TextMessage = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-784eb559"]]);
 var FileMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$g = {
+const _sfc_main$h = {
   props: {
     data: {
       type: Object,
@@ -1728,19 +1750,19 @@ const _sfc_main$g = {
     }
   }
 };
-const _hoisted_1$g = { class: "sc-message--file-icon" };
-const _hoisted_2$9 = ["src"];
-const _hoisted_3$7 = ["href"];
-function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+const _hoisted_1$h = { class: "sc-message--file-icon" };
+const _hoisted_2$a = ["src"];
+const _hoisted_3$8 = ["href"];
+function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "sc-message--file",
     style: normalizeStyle($props.messageColors)
   }, [
-    createElementVNode("div", _hoisted_1$g, [
+    createElementVNode("div", _hoisted_1$h, [
       createElementVNode("img", {
         src: $props.data.file.url,
         class: "sc-image"
-      }, null, 8, _hoisted_2$9)
+      }, null, 8, _hoisted_2$a)
     ]),
     createElementVNode("div", {
       class: "sc-message--file-name",
@@ -1749,7 +1771,7 @@ function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
       createElementVNode("a", {
         href: $props.data.file.url ? $props.data.file.url : "#",
         target: "_blank"
-      }, toDisplayString($props.data.file.name || ""), 9, _hoisted_3$7)
+      }, toDisplayString($props.data.file.name || ""), 9, _hoisted_3$8)
     ], 4),
     createElementVNode("div", {
       class: "sc-message--file-text",
@@ -1764,9 +1786,9 @@ function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     ], 4)
   ], 4);
 }
-var FileMessage = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__scopeId", "data-v-1351b099"]]);
+var FileMessage = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h], ["__scopeId", "data-v-1351b099"]]);
 var EmojiMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$f = {
+const _sfc_main$g = {
   props: {
     data: {
       type: Object,
@@ -1774,13 +1796,13 @@ const _sfc_main$f = {
     }
   }
 };
-const _hoisted_1$f = { class: "sc-message--emoji" };
-function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$f, toDisplayString($props.data.emoji), 1);
+const _hoisted_1$g = { class: "sc-message--emoji" };
+function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$g, toDisplayString($props.data.emoji), 1);
 }
-var EmojiMessage = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__scopeId", "data-v-651be057"]]);
+var EmojiMessage = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g], ["__scopeId", "data-v-651be057"]]);
 var TypingMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$e = {
+const _sfc_main$f = {
   props: {
     messageColors: {
       type: Object,
@@ -1789,23 +1811,23 @@ const _sfc_main$e = {
   }
 };
 const _withScopeId = (n) => (pushScopeId("data-v-244d06fe"), n = n(), popScopeId(), n);
-const _hoisted_1$e = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
-const _hoisted_2$8 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
-const _hoisted_3$6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _hoisted_1$f = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _hoisted_2$9 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _hoisted_3$7 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
 const _hoisted_4$2 = [
-  _hoisted_1$e,
-  _hoisted_2$8,
-  _hoisted_3$6
+  _hoisted_1$f,
+  _hoisted_2$9,
+  _hoisted_3$7
 ];
-function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "sc-typing-indicator",
     style: normalizeStyle($props.messageColors)
   }, _hoisted_4$2, 4);
 }
-var TypingMessage = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__scopeId", "data-v-244d06fe"]]);
+var TypingMessage = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f], ["__scopeId", "data-v-244d06fe"]]);
 var SystemMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$d = {
+const _sfc_main$e = {
   props: {
     data: {
       type: Object,
@@ -1817,7 +1839,7 @@ const _sfc_main$d = {
     }
   }
 };
-function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "sc-message--system",
     style: normalizeStyle($props.messageColors)
@@ -1832,10 +1854,10 @@ function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     ], true)
   ], 4);
 }
-var SystemMessage = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__scopeId", "data-v-0c1d322a"]]);
+var SystemMessage = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__scopeId", "data-v-0c1d322a"]]);
 var chatIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSItNDc0OS40OCAtNTAyMCAzNS4wMzYgMzUuMDM2Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO30uYntmaWxsOiM0ZThjZmY7fS5je2NsaXAtcGF0aDp1cmwoI2EpO30uZHtmaWxsOiNmZmY7fS5le2ZpbGw6I2VmZjRmOTt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGNsYXNzPSJhIiBkPSJNMC0zOTkuNDc5SDE3LjU1NXYxNy41NTVIMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMzk5LjQ3OSkiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDg4NiAtNTA3NSkiPjxjaXJjbGUgY2xhc3M9ImIiIGN4PSIxNy41MTgiIGN5PSIxNy41MTgiIHI9IjE3LjUxOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM2LjUyIDU1KSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0NS4xMyA2NCkiPjxnIGNsYXNzPSJjIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIj48cGF0aCBjbGFzcz0iZCIgZD0iTS0zODEuOTI0LTE5MC45NjJhOC43NzgsOC43NzgsMCwwLDAtOC43NzgtOC43NzgsOC43NzgsOC43NzgsMCwwLDAtOC43NzgsOC43NzgsOC43NDUsOC43NDUsMCwwLDAsMi4yNiw1Ljg3OXYxLjQ0MmMwLC44LjQ5MiwxLjQ1NywxLjEsMS40NTdoNS44M2EuODQzLjg0MywwLDAsMCwuMTgzLS4wMiw4Ljc3OCw4Ljc3OCwwLDAsMCw4LjE4NC04Ljc1NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzk5LjQ3OSAxOTkuNzQpIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPjxwYXRoIGNsYXNzPSJlIiBkPSJNLTY4Ljc2My0xOTQuMDc5YTkuMjkyLDkuMjkyLDAsMCwxLDYuMzgtOC44ODhjLS4yNTItLjAyMi0uNTA2LS4wMzMtLjc2My0uMDMzYTguNzc0LDguNzc0LDAsMCwwLTguNzc4LDguNzc4QTkuNTA4LDkuNTA4LDAsMCwwLTY5LjctMTg4LjNjLjAwNSwwLDAsLjAwOSwwLC4wMS0uMzExLjM1Mi0xLjkyNCwyLjg0OS4wMjEsMi44NDloMi4yNWMtMS4yMy0uMDIyLDEuMjYzLTIuMTA3LjI2OS0zLjQ5NGE4LjIyNSw4LjIyNSwwLDAsMS0xLjYtNS4xNDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcxLjkyNCAyMDMpIi8+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==";
 var Message_vue_vue_type_style_index_0_lang = "";
-const _sfc_main$c = {
+const _sfc_main$d = {
   components: {
     TextMessage,
     FileMessage,
@@ -1893,9 +1915,9 @@ const _sfc_main$c = {
     }
   }
 };
-const _hoisted_1$d = ["id"];
-const _hoisted_2$7 = ["title"];
-function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+const _hoisted_1$e = ["id"];
+const _hoisted_2$8 = ["title"];
+function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_TextMessage = resolveComponent("TextMessage");
   const _component_EmojiMessage = resolveComponent("EmojiMessage");
   const _component_FileMessage = resolveComponent("FileMessage");
@@ -1924,7 +1946,7 @@ function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
           style: normalizeStyle({
             backgroundImage: `url(${$options.chatImageUrl})`
           })
-        }, null, 12, _hoisted_2$7)), [
+        }, null, 12, _hoisted_2$8)), [
           [_directive_tooltip, $options.authorName]
         ]) : createCommentVNode("", true)
       ]),
@@ -1975,12 +1997,12 @@ function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
         _: 3
       }, 8, ["data", "message-colors"])) : createCommentVNode("", true)
     ], 2)
-  ], 8, _hoisted_1$d);
+  ], 8, _hoisted_1$e);
 }
-var Message = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c]]);
+var Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d]]);
 var MessageList_vue_vue_type_style_index_0_scoped_true_lang = "";
 let resizeObserver;
-const _sfc_main$b = {
+const _sfc_main$c = {
   components: {
     Message
   },
@@ -2069,7 +2091,7 @@ const _sfc_main$b = {
     }
   }
 };
-function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_Message = resolveComponent("Message");
   return openBlock(), createElementBlock("div", {
     ref: "scrollList",
@@ -2128,7 +2150,7 @@ function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ], 36);
 }
-var MessageList = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__scopeId", "data-v-68b7c108"]]);
+var MessageList = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c], ["__scopeId", "data-v-68b7c108"]]);
 var emoji = { exports: {} };
 (function(module, exports) {
   (function() {
@@ -5547,7 +5569,7 @@ var emojiData = [
   }
 ];
 var EmojiPicker_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$a = {
+const _sfc_main$b = {
   props: {
     onBlur: {
       type: Function,
@@ -5581,38 +5603,38 @@ const _sfc_main$a = {
     }
   }
 };
-const _hoisted_1$c = { class: "sc-emoji-picker--content" };
-const _hoisted_2$6 = { class: "sc-emoji-picker--category-title" };
-const _hoisted_3$5 = ["onClick"];
-function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+const _hoisted_1$d = { class: "sc-emoji-picker--content" };
+const _hoisted_2$7 = { class: "sc-emoji-picker--category-title" };
+const _hoisted_3$6 = ["onClick"];
+function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     ref: "domNode",
     tabIndex: "0",
     class: "sc-emoji-picker",
     onBlur: _cache[0] || (_cache[0] = (...args) => $props.onBlur && $props.onBlur(...args))
   }, [
-    createElementVNode("div", _hoisted_1$c, [
+    createElementVNode("div", _hoisted_1$d, [
       (openBlock(true), createElementBlock(Fragment, null, renderList($data.emojiData, (category) => {
         return openBlock(), createElementBlock("div", {
           key: category.name,
           class: "sc-emoji-picker--category"
         }, [
-          createElementVNode("div", _hoisted_2$6, toDisplayString(category.name), 1),
+          createElementVNode("div", _hoisted_2$7, toDisplayString(category.name), 1),
           (openBlock(true), createElementBlock(Fragment, null, renderList(category.emojis, (emoji2) => {
             return openBlock(), createElementBlock("span", {
               key: emoji2,
               class: "sc-emoji-picker--emoji",
               onClick: ($event) => $options.emojiClicked(emoji2)
-            }, toDisplayString(emoji2), 9, _hoisted_3$5);
+            }, toDisplayString(emoji2), 9, _hoisted_3$6);
           }), 128))
         ]);
       }), 128))
     ])
   ], 544);
 }
-var EmojiPicker = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__scopeId", "data-v-b46a1b52"]]);
+var EmojiPicker = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b], ["__scopeId", "data-v-b46a1b52"]]);
 var EmojiIcon_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$9 = {
+const _sfc_main$a = {
   components: {
     EmojiPicker
   },
@@ -5640,10 +5662,10 @@ const _sfc_main$9 = {
     }
   }
 };
-const _hoisted_1$b = { class: "sc-user-input--picker-wrapper" };
-function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+const _hoisted_1$c = { class: "sc-user-input--picker-wrapper" };
+function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_EmojiPicker = resolveComponent("EmojiPicker");
-  return openBlock(), createElementBlock("div", _hoisted_1$b, [
+  return openBlock(), createElementBlock("div", _hoisted_1$c, [
     $data.isActive ? (openBlock(), createBlock(_component_EmojiPicker, {
       key: 0,
       "on-emoji-picked": $props.onEmojiPicked,
@@ -5697,9 +5719,9 @@ function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ]);
 }
-var EmojiIcon = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__scopeId", "data-v-0268a584"]]);
+var EmojiIcon = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a], ["__scopeId", "data-v-0268a584"]]);
 var FileIcons_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _sfc_main$8 = {
+const _sfc_main$9 = {
   props: {
     onChange: {
       type: Function,
@@ -5719,12 +5741,12 @@ const _sfc_main$8 = {
     }
   }
 };
-const _hoisted_1$a = { style: { "position": "relative" } };
-const _hoisted_2$5 = {
+const _hoisted_1$b = { style: { "position": "relative" } };
+const _hoisted_2$6 = {
   class: "sc-user-input--file-icon-wrapper",
   type: "button"
 };
-const _hoisted_3$4 = {
+const _hoisted_3$5 = {
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   class: "sc-user-input--file-icon",
@@ -5735,10 +5757,10 @@ const _hoisted_3$4 = {
   viewBox: "0 0 37.393 37.393",
   enableBackground: "new 0 0 37.393 37.393"
 };
-function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", _hoisted_1$a, [
-    createElementVNode("button", _hoisted_2$5, [
-      (openBlock(), createElementBlock("svg", _hoisted_3$4, [
+function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  return openBlock(), createElementBlock("div", _hoisted_1$b, [
+    createElementVNode("button", _hoisted_2$6, [
+      (openBlock(), createElementBlock("svg", _hoisted_3$5, [
         createElementVNode("path", {
           style: normalizeStyle({ fill: $props.color }),
           d: "M20.807 10.22l-2.030-2.029-10.15 10.148c-1.682 1.681-1.682 4.408 0 6.089s4.408 1.681 6.090 0l12.18-12.178c2.804-2.802 2.804-7.346 0-10.148-2.802-2.803-7.347-2.803-10.149 0l-12.788 12.787c-0.009 0.009-0.019 0.018-0.027 0.026-3.909 3.909-3.909 10.245 0 14.153 3.908 3.908 10.246 3.908 14.156 0 0.009-0.009 0.016-0.018 0.026-0.027l0.001 0.001 8.729-8.728-2.031-2.029-8.729 8.727c-0.009 0.008-0.018 0.018-0.026 0.026-2.784 2.783-7.312 2.783-10.096 0-2.783-2.783-2.783-7.31 0-10.093 0.010-0.009 0.019-0.018 0.028-0.026l-0.001-0.002 12.79-12.786c1.678-1.679 4.411-1.679 6.090 0s1.678 4.411 0 6.089l-12.18 12.178c-0.56 0.56-1.47 0.56-2.030 0-0.559-0.559-0.559-1.47 0-2.029l10.15-10.149z"
@@ -5753,11 +5775,36 @@ function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     ])
   ]);
 }
-var FileIcons = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8], ["__scopeId", "data-v-57681c9b"]]);
+var FileIcons = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9], ["__scopeId", "data-v-57681c9b"]]);
+const _sfc_main$8 = {};
+const _hoisted_1$a = {
+  width: "22",
+  height: "22",
+  viewBox: "0 0 22 22",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg"
+};
+const _hoisted_2$5 = /* @__PURE__ */ createElementVNode("g", { id: "SVG" }, [
+  /* @__PURE__ */ createElementVNode("path", {
+    id: "Vector",
+    d: "M6.66602 10.1334L10.9993 5.80005L15.3327 10.1334M10.9993 16.2V6.66672",
+    stroke: "white",
+    "stroke-width": "1.73333",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round"
+  })
+], -1);
+const _hoisted_3$4 = [
+  _hoisted_2$5
+];
+function _sfc_render$8(_ctx, _cache) {
+  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$4);
+}
+var IconUpload = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8]]);
 var UserInputButton_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$7 = {
   components: {
-    IconBase
+    IconUpload
   },
   props: {
     color: {
@@ -5772,12 +5819,11 @@ const _sfc_main$7 = {
 };
 const _hoisted_1$9 = { class: "sc-user-input--button-icon-wrapper" };
 function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_IconBase = resolveComponent("IconBase");
+  const _component_IconUpload = resolveComponent("IconUpload");
   return openBlock(), createElementBlock("button", _hoisted_1$9, [
-    createVNode(_component_IconBase, {
+    createVNode(_component_IconUpload, {
       color: $props.color,
-      width: "20",
-      height: "20",
+      class: "sc-user-input--button-icon",
       "icon-name": $props.tooltip
     }, {
       default: withCtx(() => [
@@ -5787,7 +5833,7 @@ function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     }, 8, ["color", "icon-name"])
   ]);
 }
-var UserInputButton = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-e41567fc"]]);
+var UserInputButton = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-354f06f4"]]);
 var Suggestions_vue_vue_type_style_index_0_lang = "";
 const _sfc_main$6 = {
   props: {
@@ -5825,7 +5871,6 @@ function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
 }
 var Suggestions = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
 var FileIcon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNTYgNTYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2IDU2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnIGlkPSJzdmdfMSI+CiAgIDxwYXRoIGlkPSJzdmdfMiIgZmlsbD0iI0U5RTlFMCIgZD0ibTM2Ljk4NSwwbC0yOS4wMjIsMGMtMC44MDgsMCAtMS40NjMsMC42NTUgLTEuNDYzLDEuOTI2bDAsNTMuMDc0YzAsMC4zNDUgMC42NTUsMSAxLjQ2MywxbDQwLjA3NCwwYzAuODA4LDAgMS40NjMsLTAuNjU1IDEuNDYzLC0xbDAsLTQyLjAyMmMwLC0wLjY5NiAtMC4wOTMsLTAuOTIgLTAuMjU3LC0xLjA4NWwtMTEuNjM2LC0xMS42MzZjLTAuMTY1LC0wLjE2NCAtMC4zODksLTAuMjU3IC0wLjYyMiwtMC4yNTd6Ii8+CiAgIDxwb2x5Z29uIGlkPSJzdmdfMyIgZmlsbD0iI0Q5RDdDQSIgcG9pbnRzPSIzNy41LDAuMTUxIDM3LjUsMTIgNDkuMzQ5LDEyICAiLz4KICAgPHBhdGggaWQ9InN2Z180IiBmaWxsPSIjOTVBNUE1IiBkPSJtNDguMDM3LDU2bC00MC4wNzQsMGMtMC44MDgsMCAtMS40NjMsLTAuNjU1IC0xLjQ2MywtMS40NjNsMCwtMTUuNTM3bDQzLDBsMCwxNS41MzdjMCwwLjgwOCAtMC42NTUsMS40NjMgLTEuNDYzLDEuNDYzeiIvPgogICA8cGF0aCBpZD0ic3ZnXzkiIGZpbGw9IiNDOEJEQjgiIGQ9Im0xOC41LDEzbC02LDBjLTAuNTUzLDAgLTEsLTAuNDQ4IC0xLC0xczAuNDQ3LC0xIDEsLTFsNiwwYzAuNTUzLDAgMSwwLjQ0OCAxLDFzLTAuNDQ3LDEgLTEsMXoiLz4KICAgPHBhdGggaWQ9InN2Z18xMCIgZmlsbD0iI0M4QkRCOCIgZD0ibTIxLjUsMThsLTksMGMtMC41NTMsMCAtMSwtMC40NDggLTEsLTFzMC40NDcsLTEgMSwtMWw5LDBjMC41NTMsMCAxLDAuNDQ4IDEsMXMtMC40NDcsMSAtMSwxeiIvPgogICA8cGF0aCBpZD0ic3ZnXzExIiBmaWxsPSIjQzhCREI4IiBkPSJtMjUuNSwxOGMtMC4yNiwwIC0wLjUyMSwtMC4xMSAtMC43MSwtMC4yOWMtMC4xODEsLTAuMTkgLTAuMjksLTAuNDQgLTAuMjksLTAuNzFzMC4xMDksLTAuNTIgMC4zLC0wLjcxYzAuMzYsLTAuMzcgMS4wNCwtMC4zNyAxLjQxLDBjMC4xOCwwLjE5IDAuMjksMC40NSAwLjI5LDAuNzFjMCwwLjI2IC0wLjExLDAuNTIgLTAuMjksMC43MWMtMC4xOSwwLjE4IC0wLjQ1LDAuMjkgLTAuNzEsMC4yOXoiLz4KICAgPHBhdGggaWQ9InN2Z18xMiIgZmlsbD0iI0M4QkRCOCIgZD0ibTM3LjUsMThsLTgsMGMtMC41NTMsMCAtMSwtMC40NDggLTEsLTFzMC40NDcsLTEgMSwtMWw4LDBjMC41NTMsMCAxLDAuNDQ4IDEsMXMtMC40NDcsMSAtMSwxeiIvPgogICA8cGF0aCBpZD0ic3ZnXzEzIiBmaWxsPSIjQzhCREI4IiBkPSJtMTIuNSwzM2MtMC4yNiwwIC0wLjUyMSwtMC4xMSAtMC43MSwtMC4yOWMtMC4xODEsLTAuMTkgLTAuMjksLTAuNDUgLTAuMjksLTAuNzFjMCwtMC4yNiAwLjEwOSwtMC41MiAwLjI5LC0wLjcxYzAuMzcsLTAuMzcgMS4wNSwtMC4zNyAxLjQyLDAuMDFjMC4xOCwwLjE4IDAuMjksMC40NCAwLjI5LDAuN2MwLDAuMjYgLTAuMTEsMC41MiAtMC4yOSwwLjcxYy0wLjE5LDAuMTggLTAuNDUsMC4yOSAtMC43MSwwLjI5eiIvPgogICA8cGF0aCBpZD0ic3ZnXzE0IiBmaWxsPSIjQzhCREI4IiBkPSJtMjQuNSwzM2wtOCwwYy0wLjU1MywwIC0xLC0wLjQ0OCAtMSwtMXMwLjQ0NywtMSAxLC0xbDgsMGMwLjU1MywwIDEsMC40NDggMSwxcy0wLjQ0NywxIC0xLDF6Ii8+CiAgIDxwYXRoIGlkPSJzdmdfMTUiIGZpbGw9IiNDOEJEQjgiIGQ9Im00My41LDE4bC0yLDBjLTAuNTUzLDAgLTEsLTAuNDQ4IC0xLC0xczAuNDQ3LC0xIDEsLTFsMiwwYzAuNTUzLDAgMSwwLjQ0OCAxLDFzLTAuNDQ3LDEgLTEsMXoiLz4KICAgPHBhdGggaWQ9InN2Z18xNiIgZmlsbD0iI0M4QkRCOCIgZD0ibTM0LjUsMjNsLTIyLDBjLTAuNTUzLDAgLTEsLTAuNDQ4IC0xLC0xczAuNDQ3LC0xIDEsLTFsMjIsMGMwLjU1MywwIDEsMC40NDggMSwxcy0wLjQ0NywxIC0xLDF6Ii8+CiAgIDxwYXRoIGlkPSJzdmdfMTciIGZpbGw9IiNDOEJEQjgiIGQ9Im00My41LDIzbC02LDBjLTAuNTUzLDAgLTEsLTAuNDQ4IC0xLC0xczAuNDQ3LC0xIDEsLTFsNiwwYzAuNTUzLDAgMSwwLjQ0OCAxLDFzLTAuNDQ3LDEgLTEsMXoiLz4KICAgPHBhdGggaWQ9InN2Z18xOCIgZmlsbD0iI0M4QkRCOCIgZD0ibTE2LjUsMjhsLTQsMGMtMC41NTMsMCAtMSwtMC40NDggLTEsLTFzMC40NDcsLTEgMSwtMWw0LDBjMC41NTMsMCAxLDAuNDQ4IDEsMXMtMC40NDcsMSAtMSwxeiIvPgogICA8cGF0aCBpZD0ic3ZnXzE5IiBmaWxsPSIjQzhCREI4IiBkPSJtMzAuNSwyOGwtMTAsMGMtMC41NTMsMCAtMSwtMC40NDggLTEsLTFzMC40NDcsLTEgMSwtMWwxMCwwYzAuNTUzLDAgMSwwLjQ0OCAxLDFzLTAuNDQ3LDEgLTEsMXoiLz4KICAgPHBhdGggaWQ9InN2Z18yMCIgZmlsbD0iI0M4QkRCOCIgZD0ibTQzLjUsMjhsLTksMGMtMC41NTMsMCAtMSwtMC40NDggLTEsLTFzMC40NDcsLTEgMSwtMWw5LDBjMC41NTMsMCAxLDAuNDQ4IDEsMXMtMC40NDcsMSAtMSwxeiIvPgogIDwvZz4KICA8ZyBpZD0ic3ZnXzIxIi8+CiAgPGcgaWQ9InN2Z18yMiIvPgogIDxnIGlkPSJzdmdfMjMiLz4KICA8ZyBpZD0ic3ZnXzI0Ii8+CiAgPGcgaWQ9InN2Z18yNSIvPgogIDxnIGlkPSJzdmdfMjYiLz4KICA8ZyBpZD0ic3ZnXzI3Ii8+CiAgPGcgaWQ9InN2Z18yOCIvPgogIDxnIGlkPSJzdmdfMjkiLz4KICA8ZyBpZD0ic3ZnXzMwIi8+CiAgPGcgaWQ9InN2Z18zMSIvPgogIDxnIGlkPSJzdmdfMzIiLz4KICA8ZyBpZD0ic3ZnXzMzIi8+CiAgPGcgaWQ9InN2Z18zNCIvPgogIDxnIGlkPSJzdmdfMzUiLz4KPC9zdmc+";
-var CloseIconSvg = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgNDcuOTcxIDQ3Ljk3MSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcuOTcxIDQ3Ljk3MTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik0yOC4yMjgsMjMuOTg2TDQ3LjA5Miw1LjEyMmMxLjE3Mi0xLjE3MSwxLjE3Mi0zLjA3MSwwLTQuMjQyYy0xLjE3Mi0xLjE3Mi0zLjA3LTEuMTcyLTQuMjQyLDBMMjMuOTg2LDE5Ljc0NEw1LjEyMSwwLjg4CgkJYy0xLjE3Mi0xLjE3Mi0zLjA3LTEuMTcyLTQuMjQyLDBjLTEuMTcyLDEuMTcxLTEuMTcyLDMuMDcxLDAsNC4yNDJsMTguODY1LDE4Ljg2NEwwLjg3OSw0Mi44NWMtMS4xNzIsMS4xNzEtMS4xNzIsMy4wNzEsMCw0LjI0MgoJCUMxLjQ2NSw0Ny42NzcsMi4yMzMsNDcuOTcsMyw0Ny45N3MxLjUzNS0wLjI5MywyLjEyMS0wLjg3OWwxOC44NjUtMTguODY0TDQyLjg1LDQ3LjA5MWMwLjU4NiwwLjU4NiwxLjM1NCwwLjg3OSwyLjEyMSwwLjg3OQoJCXMxLjUzNS0wLjI5MywyLjEyMS0wLjg3OWMxLjE3Mi0xLjE3MSwxLjE3Mi0zLjA3MSwwLTQuMjQyTDI4LjIyOCwyMy45ODZ6Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+";
 const _sfc_main$5 = {};
 const _hoisted_1$7 = { d: "M7.629,14.566c0.125,0.125,0.291,0.188,0.456,0.188c0.164,0,0.329-0.062,0.456-0.188l8.219-8.221c0.252-0.252,0.252-0.659,0-0.911c-0.252-0.252-0.659-0.252-0.911,0l-7.764,7.763L4.152,9.267c-0.252-0.251-0.66-0.251-0.911,0c-0.252,0.252-0.252,0.66,0,0.911L7.629,14.566z" };
 function _sfc_render$5(_ctx, _cache) {
@@ -6075,33 +6120,23 @@ const _sfc_main$3 = {
     }
   }
 };
-const _hoisted_1$5 = { class: "icon-file-message" };
-const _hoisted_2$4 = ["src", "alt"];
+const _hoisted_1$5 = { class: "sc-user-input-wrap" };
+const _hoisted_2$4 = { class: "icon-file-message" };
 const _hoisted_3$3 = ["src", "alt"];
-const _hoisted_4$1 = ["placeholder"];
-const _hoisted_5$1 = { class: "sc-user-input--buttons" };
-const _hoisted_6$1 = /* @__PURE__ */ createElementVNode("div", { class: "sc-user-input--button" }, null, -1);
+const _hoisted_4$1 = ["src", "alt"];
+const _hoisted_5$1 = ["placeholder"];
+const _hoisted_6$1 = { class: "sc-user-input--buttons" };
 const _hoisted_7$1 = {
   key: 0,
   class: "sc-user-input--button"
 };
-const _hoisted_8 = {
-  key: 1,
-  class: "sc-user-input--button"
-};
-const _hoisted_9 = {
-  key: 2,
-  class: "sc-user-input--button"
-};
-const _hoisted_10 = { class: "sc-user-input--button" };
+const _hoisted_8 = { class: "sc-user-input--button" };
 function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_EmojiIcon = resolveComponent("EmojiIcon");
-  const _component_FileIcons = resolveComponent("FileIcons");
   const _component_IconCross = resolveComponent("IconCross");
   const _component_UserInputButton = resolveComponent("UserInputButton");
   const _component_IconOk = resolveComponent("IconOk");
   const _component_IconSend = resolveComponent("IconSend");
-  return openBlock(), createElementBlock("div", null, [
+  return openBlock(), createElementBlock("div", _hoisted_1$5, [
     $data.file ? (openBlock(), createElementBlock("div", {
       key: 0,
       class: "file-container",
@@ -6110,12 +6145,12 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         color: $props.colors.userInput.bg
       })
     }, [
-      createElementVNode("span", _hoisted_1$5, [
+      createElementVNode("span", _hoisted_2$4, [
         createElementVNode("img", {
           src: $props.icons.file.img,
           alt: $props.icons.file.name,
           height: "15"
-        }, null, 8, _hoisted_2$4)
+        }, null, 8, _hoisted_3$3)
       ]),
       createTextVNode(" " + toDisplayString($data.file.name) + " ", 1),
       createElementVNode("span", {
@@ -6127,7 +6162,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
           alt: $props.icons.closeSvg.name,
           height: "10",
           title: "Remove the file"
-        }, null, 8, _hoisted_3$3)
+        }, null, 8, _hoisted_4$1)
       ])
     ], 4)) : createCommentVNode("", true),
     createElementVNode("form", {
@@ -6147,22 +6182,9 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         onKeydown: _cache[3] || (_cache[3] = (...args) => $options.handleKey && $options.handleKey(...args)),
         onInput: _cache[4] || (_cache[4] = (...args) => $options.handleInput && $options.handleInput(...args)),
         "on:focusUserInput": _cache[5] || (_cache[5] = ($event) => $options.focusUserInput())
-      }, null, 44, _hoisted_4$1),
-      createElementVNode("div", _hoisted_5$1, [
-        _hoisted_6$1,
-        $props.showEmoji && !$options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_7$1, [
-          createVNode(_component_EmojiIcon, {
-            "on-emoji-picked": $options._handleEmojiPicked,
-            color: $props.colors.userInput.text
-          }, null, 8, ["on-emoji-picked", "color"])
-        ])) : createCommentVNode("", true),
-        $props.showFile && !$options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_8, [
-          createVNode(_component_FileIcons, {
-            "on-change": $options._handleFileSubmit,
-            color: $props.colors.userInput.text
-          }, null, 8, ["on-change", "color"])
-        ])) : createCommentVNode("", true),
-        $options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_9, [
+      }, null, 44, _hoisted_5$1),
+      createElementVNode("div", _hoisted_6$1, [
+        $options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_7$1, [
           createVNode(_component_UserInputButton, {
             color: $props.colors.userInput.text,
             tooltip: "cancel",
@@ -6174,7 +6196,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
             _: 1
           }, 8, ["color", "onClick"])
         ])) : createCommentVNode("", true),
-        createElementVNode("div", _hoisted_10, [
+        createElementVNode("div", _hoisted_8, [
           $options.isEditing ? (openBlock(), createBlock(_component_UserInputButton, {
             key: 0,
             color: $props.colors.userInput.text,
