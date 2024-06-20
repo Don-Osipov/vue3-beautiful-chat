@@ -350,8 +350,8 @@ export default {
   border: 1px solid #d1d5db; /* Tailwind's gray-300 */
   background-color: #ffffff;
   cursor: text;
-  margin-bottom: .6rem; 
-  margin-top: .6rem; 
+  margin-bottom: .8rem; 
+  margin-top: .8rem; 
   box-sizing: border-box;
 }
 

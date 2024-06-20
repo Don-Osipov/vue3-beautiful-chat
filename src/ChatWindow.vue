@@ -181,6 +181,7 @@ export default {
   animation: fadeIn;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
+  gap: 0px;
 }
 
 .sc-chat-window.closed {
