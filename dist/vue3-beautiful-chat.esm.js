@@ -6126,23 +6126,25 @@ const _sfc_main$3 = {
     }
   }
 };
-const _hoisted_1$5 = { class: "sc-user-input-wrap" };
-const _hoisted_2$4 = { class: "icon-file-message" };
+const _hoisted_1$5 = { class: "icon-file-message" };
+const _hoisted_2$4 = ["src", "alt"];
 const _hoisted_3$3 = ["src", "alt"];
-const _hoisted_4$1 = ["src", "alt"];
-const _hoisted_5$1 = ["placeholder"];
-const _hoisted_6$1 = { class: "sc-user-input--buttons" };
-const _hoisted_7$1 = {
+const _hoisted_4$1 = ["placeholder"];
+const _hoisted_5$1 = { class: "sc-user-input--buttons" };
+const _hoisted_6$1 = {
   key: 0,
   class: "sc-user-input--button"
 };
-const _hoisted_8 = { class: "sc-user-input--button" };
+const _hoisted_7$1 = { class: "sc-user-input--button" };
 function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_IconCross = resolveComponent("IconCross");
   const _component_UserInputButton = resolveComponent("UserInputButton");
   const _component_IconOk = resolveComponent("IconOk");
   const _component_IconSend = resolveComponent("IconSend");
-  return openBlock(), createElementBlock("div", _hoisted_1$5, [
+  return openBlock(), createElementBlock("div", {
+    class: "sc-user-input-wrap",
+    style: normalizeStyle({ background: $props.colors.userInput.bg })
+  }, [
     $data.file ? (openBlock(), createElementBlock("div", {
       key: 0,
       class: "file-container",
@@ -6151,12 +6153,12 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         color: $props.colors.userInput.bg
       })
     }, [
-      createElementVNode("span", _hoisted_2$4, [
+      createElementVNode("span", _hoisted_1$5, [
         createElementVNode("img", {
           src: $props.icons.file.img,
           alt: $props.icons.file.name,
           height: "15"
-        }, null, 8, _hoisted_3$3)
+        }, null, 8, _hoisted_2$4)
       ]),
       createTextVNode(" " + toDisplayString($data.file.name) + " ", 1),
       createElementVNode("span", {
@@ -6168,7 +6170,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
           alt: $props.icons.closeSvg.name,
           height: "10",
           title: "Remove the file"
-        }, null, 8, _hoisted_4$1)
+        }, null, 8, _hoisted_3$3)
       ])
     ], 4)) : createCommentVNode("", true),
     createElementVNode("form", {
@@ -6188,9 +6190,9 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         onKeydown: _cache[3] || (_cache[3] = (...args) => $options.handleKey && $options.handleKey(...args)),
         onInput: _cache[4] || (_cache[4] = (...args) => $options.handleInput && $options.handleInput(...args)),
         "on:focusUserInput": _cache[5] || (_cache[5] = ($event) => $options.focusUserInput())
-      }, null, 44, _hoisted_5$1),
-      createElementVNode("div", _hoisted_6$1, [
-        $options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_7$1, [
+      }, null, 44, _hoisted_4$1),
+      createElementVNode("div", _hoisted_5$1, [
+        $options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_6$1, [
           createVNode(_component_UserInputButton, {
             color: $props.colors.userInput.text,
             tooltip: "cancel",
@@ -6202,7 +6204,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
             _: 1
           }, 8, ["color", "onClick"])
         ])) : createCommentVNode("", true),
-        createElementVNode("div", _hoisted_8, [
+        createElementVNode("div", _hoisted_7$1, [
           $options.isEditing ? (openBlock(), createBlock(_component_UserInputButton, {
             key: 0,
             color: $props.colors.userInput.text,
@@ -6227,7 +6229,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         ])
       ])
     ], 6)
-  ]);
+  ], 4);
 }
 var UserInput = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3]]);
 var UserList_vue_vue_type_style_index_0_scoped_true_lang = "";

@@ -1,5 +1,5 @@
 <template>
-  <div class="sc-user-input-wrap">
+  <div class="sc-user-input-wrap"  :style="{background: colors.userInput.bg}">
     <div
       v-if="file"
       class="file-container"
