@@ -104,7 +104,6 @@
       :message-styling="messageStyling"
       :on-message="sendMessage"
       :on-typing="handleTyping"
-      ref="inputBox"
     />
     <Footer :chosen-color="chosenColor" :colors="colors" />
   </div>
@@ -165,7 +164,6 @@ export default {
           id: Math.random(),
           data: {text}
         })
-        this.$refs.inputBox.value = ''
       }
     },
     handleTyping(text) {

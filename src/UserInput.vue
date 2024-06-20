@@ -250,6 +250,7 @@ export default {
               data: {text}
             })
           )
+          this.$refs.userInput.textContent = ''; // Clear the text input field
         }
       }
     },
