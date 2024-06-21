@@ -176,7 +176,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 10px !important;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   animation: fadeIn;
   animation-duration: 0.3s;
