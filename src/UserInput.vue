@@ -449,7 +449,7 @@ export default {
 .file-container {
   background-color: #f4f7f9;
   border-top-left-radius: 10px;
-  padding: 5px 20px;
+  padding: 16px;
   color: #565867;
 }
 

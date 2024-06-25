@@ -117,7 +117,7 @@ export default {
 
 <style scoped lang="scss">
 .sc-message--text {
-  padding: 5px 20px;
+  padding: 16px;
   border-radius: 6px;
   font-weight: 300;
   font-size: 14px;
