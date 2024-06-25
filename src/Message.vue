@@ -192,7 +192,7 @@ export default {
 }
 
 .sc-message--text {
-  padding: 5px 20px;
+  padding: 16px;
   border-radius: 6px;
   font-weight: 300;
   font-size: 14px;
@@ -245,7 +245,7 @@ export default {
 }
 
 .sc-message--text code {
-  font-family: 'Courier New', Courier, monospace !important;
+  font-family: Roboto,'Courier New', Courier, monospace !important;
 }
 
 .sc-message--content.received .sc-message--text {

@@ -349,7 +349,6 @@ export default {
   align-items: center;
   width: 90%;
   border-radius: 1rem; /* 16px */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
   border: 1px solid #d1d5db; /* Tailwind's gray-300 */
   background-color: #ffffff;
   cursor: text;
