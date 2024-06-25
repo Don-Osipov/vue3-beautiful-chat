@@ -5838,7 +5838,7 @@ function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     }, 8, ["color", "icon-name"])
   ]);
 }
-var UserInputButton = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-354f06f4"]]);
+var UserInputButton = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7], ["__scopeId", "data-v-1e8ae7ba"]]);
 var Suggestions_vue_vue_type_style_index_0_lang = "";
 const _sfc_main$6 = {
   props: {
@@ -6129,13 +6129,12 @@ const _sfc_main$3 = {
 const _hoisted_1$5 = { class: "icon-file-message" };
 const _hoisted_2$4 = ["src", "alt"];
 const _hoisted_3$3 = ["src", "alt"];
-const _hoisted_4$1 = ["placeholder"];
-const _hoisted_5$1 = { class: "sc-user-input--buttons" };
-const _hoisted_6$1 = {
+const _hoisted_4$1 = { class: "sc-user-input--buttons" };
+const _hoisted_5$1 = {
   key: 0,
   class: "sc-user-input--button"
 };
-const _hoisted_7$1 = { class: "sc-user-input--button" };
+const _hoisted_6$1 = { class: "sc-user-input--button" };
 function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_IconCross = resolveComponent("IconCross");
   const _component_UserInputButton = resolveComponent("UserInputButton");
@@ -6182,7 +6181,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         role: "button",
         tabIndex: "0",
         contentEditable: "true",
-        placeholder: $props.placeholder,
+        placeholder: "Type",
         class: "sc-user-input--text",
         style: normalizeStyle({ color: $props.colors.userInput.text }),
         onFocus: _cache[1] || (_cache[1] = ($event) => $options.setInputActive(true)),
@@ -6190,9 +6189,9 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
         onKeydown: _cache[3] || (_cache[3] = (...args) => $options.handleKey && $options.handleKey(...args)),
         onInput: _cache[4] || (_cache[4] = (...args) => $options.handleInput && $options.handleInput(...args)),
         "on:focusUserInput": _cache[5] || (_cache[5] = ($event) => $options.focusUserInput())
-      }, null, 44, _hoisted_4$1),
-      createElementVNode("div", _hoisted_5$1, [
-        $options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_6$1, [
+      }, null, 36),
+      createElementVNode("div", _hoisted_4$1, [
+        $options.isEditing ? (openBlock(), createElementBlock("div", _hoisted_5$1, [
           createVNode(_component_UserInputButton, {
             color: $props.colors.userInput.text,
             tooltip: "cancel",
@@ -6204,7 +6203,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
             _: 1
           }, 8, ["color", "onClick"])
         ])) : createCommentVNode("", true),
-        createElementVNode("div", _hoisted_7$1, [
+        createElementVNode("div", _hoisted_6$1, [
           $options.isEditing ? (openBlock(), createBlock(_component_UserInputButton, {
             key: 0,
             color: $props.colors.userInput.text,
@@ -6460,7 +6459,7 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     }, null, 8, ["show-emoji", "show-emoji-in-text", "on-submit", "suggestions", "show-file", "placeholder", "colors"])) : createCommentVNode("", true)
   ], 2);
 }
-var ChatWindow = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__scopeId", "data-v-28537ea4"]]);
+var ChatWindow = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__scopeId", "data-v-3f1be203"]]);
 var CloseIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKVQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////uP3jVQAAADd0Uk5TAE9lCAXd9XA4y/9zDQJG7HYB8Hc3yHoPQ8fuezMSoYPrEcEugj0tqb6G+Lw5ifHcKk3SIAx/MjRpS8YAAADsSURBVHic7dDJDoIwEIDhQURwQNGiIBVkUQH3BfX9H00MEvHW9qj9L3RIvkxTAJlMJvu1lI7aHtWOwm67Wk9vz3pP67Jro4+m1QyWiX2D3cJgqNmjt7ZGtjYccGAYK8R26qNjE2XMY6smU3Q9AM/F6YSTVrtnPp173pz6M969Lx1Q6rqUBgK2KvAR/UCIAoQLxEUoiCMSxyQSokmE6XKZYpQI2BVJ1wDrlKz4dXXn7PXN+G8e5lhk9TErMOd6tXCz3e2bYb/bbnj04Xg6f6bz6Xhgtxe8lu25vOKFGd/uj+8fj/uNfbVMJpP9QU/STxAzeUFqVwAAAABJRU5ErkJggg==";
 var OpenIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJub25lIi8+PGRlZnM+PHN0eWxlPi5he2ZpbGw6bm9uZTt9LmJ7ZmlsbDojNGU4Y2ZmO30uY3tjbGlwLXBhdGg6dXJsKCNhKTt9LmR7ZmlsbDojZmZmO30uZXtmaWxsOiNlZmY0Zjk7fTwvc3R5bGU+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBjbGFzcz0iYSIgZD0iTSAwIDAgSCAxNy41NTUgdiAxNy41NTUgSCAwIFoiIGlkPSJzdmdfMSIgdHJhbnNmb3JtPSIiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGFzcz0iY3VycmVudExheWVyIiBzdHlsZT0iIj48dGl0bGU+TGF5ZXIgMTwvdGl0bGU+PGcgaWQ9InN2Z18yIiBjbGFzcz0ic2VsZWN0ZWQiIHRyYW5zZm9ybT0iIj48ZyBpZD0ic3ZnXzMiIHRyYW5zZm9ybT0iIj48ZyBjbGFzcz0iYyIgaWQ9InN2Z180IiB0cmFuc2Zvcm09IiI+PGcgaWQ9InN2Z181IiB0cmFuc2Zvcm09IiI+PHBhdGggY2xhc3M9ImQiIGQ9Ik0gMTcuNTU2IDguNzc4NDIgYSA4Ljc3OCA4Ljc3OCAwIDAgMCAtOC43NzggLTguNzc4IGEgOC43NzggOC43NzggMCAwIDAgLTguNzc4IDguNzc4IGEgOC43NDUgOC43NDUgMCAwIDAgMi4yNiA1Ljg3OSB2IDEuNDQyIGMgMCAwLjggMC40OTIgMS40NTcgMS4xIDEuNDU3IGggNS44MyBhIDAuODQzIDAuODQzIDAgMCAwIDAuMTgzIC0wLjAyIGEgOC43NzggOC43NzggMCAwIDAgOC4xODQgLTguNzU3IiBpZD0ic3ZnXzYiIHRyYW5zZm9ybT0iIi8+PC9nPjxnIGlkPSJzdmdfNyIgdHJhbnNmb3JtPSIiPjxwYXRoIGNsYXNzPSJlIiBkPSJNIDMuMTYxNDggOC45MjEgYSA5LjI5MiA5LjI5MiAwIDAgMSA2LjM4IC04Ljg4OCBjIC0wLjI1MiAtMC4wMjIgLTAuNTA2IC0wLjAzMyAtMC43NjMgLTAuMDMzIGEgOC43NzQgOC43NzQgMCAwIDAgLTguNzc4IDguNzc4IEEgOS41MDggOS41MDggMCAwIDAgMi4yMjQ0NyAxNC43MDAzIGMgMC4wMDUgMCAwIDAuMDA5IDAgMC4wMSBjIC0wLjMxMSAwLjM1MiAtMS45MjQgMi44NDkgMC4wMjEgMi44NDkgaCAyLjI1IGMgLTEuMjMgLTAuMDIyIDEuMjYzIC0yLjEwNyAwLjI2OSAtMy40OTQgYSA4LjIyNSA4LjIyNSAwIDAgMSAtMS42IC01LjE0MSIgaWQ9InN2Z184IiB0cmFuc2Zvcm09IiIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+";
 var Launcher_vue_vue_type_style_index_0_scoped_true_lang = "";

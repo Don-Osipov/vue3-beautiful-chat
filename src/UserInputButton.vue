@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .sc-user-input--button-icon-wrapper {
   background: #D4DCE8;
-  border-radius: 3px;
+  border-radius: 5.2px;
   border: none;
   padding: 0px;
   margin: 0px;

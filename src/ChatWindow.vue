@@ -176,12 +176,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 10px !important;
+  border-radius: 16px ;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   animation: fadeIn;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   gap: 0px;
+  border: 1px solid #D4DCE8;
 }
 
 .sc-chat-window.closed {

@@ -30,7 +30,7 @@
         role="button"
         tabIndex="0"
         contentEditable="true"
-        :placeholder="placeholder"
+        placeholder="Type"
         class="sc-user-input--text"
         :style="{color: colors.userInput.text}"
         @focus="setInputActive(true)"
@@ -358,9 +358,9 @@ export default {
 }
 
 .sc-user-input:focus-within {
-  outline: 2px solid rgba(59, 130, 246, 0.5); /* Tailwind's primary-blue-50a */
-  outline-offset: -2px; /* Adjusts the outline to be within the element's border */
-  border: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Tailwind's primary-blue-50a */
+  border: 1px solid #d1d5db; /* Maintain the border */
+  outline: none; /* Remove the outline */
 }
 .sc-user-input--text {
   flex: 1;
