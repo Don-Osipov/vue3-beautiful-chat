@@ -1736,7 +1736,7 @@ function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     ], true)
   ], 4);
 }
-var TextMessage = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-784eb559"]]);
+var TextMessage = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i], ["__scopeId", "data-v-82d2da86"]]);
 var FileMessage_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$h = {
   props: {
