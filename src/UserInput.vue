@@ -358,10 +358,9 @@ export default {
 }
 
 .sc-user-input:focus-within {
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Tailwind's primary-blue-50a */
-  outline: none;
+  outline: 2px solid rgba(59, 130, 246, 0.5); /* Tailwind's primary-blue-50a */
+  outline-offset: -2px; /* Adjusts the outline to be within the element's border */
   border: none;
-
 }
 .sc-user-input--text {
   flex: 1;
