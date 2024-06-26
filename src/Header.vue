@@ -140,7 +140,7 @@ export default {
   background-color: #1677FF;
   margin-left: 5px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
 .sc-message--avatar-img {
