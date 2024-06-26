@@ -144,7 +144,7 @@ export default {
 }
 
 .sc-message--avatar.minimized {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .sc-message--avatar-img {

@@ -69,7 +69,7 @@ function _sfc_render$m(_ctx, _cache) {
 }
 var MinimizeIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
 var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _withScopeId$2 = (n) => (pushScopeId("data-v-1c984b2c"), n = n(), popScopeId(), n);
+const _withScopeId$2 = (n) => (pushScopeId("data-v-148ec2ac"), n = n(), popScopeId(), n);
 const _hoisted_1$m = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("img", {
   src: _imports_0,
   class: "sc-message--avatar-img"
@@ -152,7 +152,7 @@ const _sfc_main$m = Object.assign(__default__, {
     };
   }
 });
-var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-1c984b2c"]]);
+var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-148ec2ac"]]);
 var IconBase_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$l = {
   props: {
