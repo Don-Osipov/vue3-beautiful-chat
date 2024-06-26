@@ -1,4 +1,4 @@
-import { reactive, openBlock, createElementBlock, createElementVNode, normalizeStyle, createVNode, createCommentVNode, toDisplayString, renderSlot, resolveComponent, withCtx, createTextVNode, pushScopeId, popScopeId, resolveDirective, normalizeClass, withDirectives, createBlock, Fragment, renderList, vShow, withModifiers, nextTick, withScopeId, withKeys, mergeProps, ref, createApp, h } from "vue";
+import { reactive, openBlock, createElementBlock, createElementVNode, normalizeStyle, createVNode, createCommentVNode, pushScopeId, popScopeId, toDisplayString, renderSlot, resolveComponent, withCtx, createTextVNode, resolveDirective, normalizeClass, withDirectives, createBlock, Fragment, renderList, vShow, withModifiers, nextTick, withScopeId, withKeys, mergeProps, ref, createApp, h } from "vue";
 const store = {
   state: reactive({
     editMessage: null
@@ -16,6 +16,7 @@ function mapState(keys) {
   });
   return map;
 }
+var _imports_0 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9Im5vbmUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOS44MTg0IDE2LjY2MDZDMTkuODE4NCAxNi4xNzUyIDIwLjIyMjMgMTUuNzgxNyAyMC43MjA1IDE1Ljc4MTdIMjUuMDAwNkMyNS40OTg4IDE1Ljc4MTcgMjUuOTAyNyAxNi4xNzUyIDI1LjkwMjcgMTYuNjYwNlYyMC44MzAzQzI1LjkwMjcgMjEuMzE1NyAyNS40OTg4IDIxLjcwOTIgMjUuMDAwNiAyMS43MDkyQzI0LjUwMjMgMjEuNzA5MiAyNC4wOTg0IDIxLjMxNTcgMjQuMDk4NCAyMC44MzAzVjE3LjUzOTZIMjAuNzIwNUMyMC4yMjIzIDE3LjUzOTYgMTkuODE4NCAxNy4xNDYxIDE5LjgxODQgMTYuNjYwNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNTc5OCAyMS43MDk1QzE3Ljg5NjEgMjEuNzA5NSAxNy4zNDE5IDIyLjI0OTQgMTcuMzQxOSAyMi45MTU0VjMxLjI1NDhDMTcuMzQxOSAzMS45MjA4IDE3Ljg5NjEgMzIuNDYwNyAxOC41Nzk4IDMyLjQ2MDdIMzEuNDE5OUMzMi4xMDM2IDMyLjQ2MDcgMzIuNjU3OCAzMS45MjA4IDMyLjY1NzggMzEuMjU0OFYyMi45MTU0QzMyLjY1NzggMjIuMjQ5NCAzMi4xMDM2IDIxLjcwOTUgMzEuNDE5OSAyMS43MDk1SDE4LjU3OThaTTE1LjUzNzYgMjIuOTE1NEMxNS41Mzc2IDIxLjI3ODYgMTYuODk5NiAxOS45NTE3IDE4LjU3OTggMTkuOTUxN0gzMS40MTk5QzMzLjEwMDEgMTkuOTUxNyAzNC40NjIxIDIxLjI3ODYgMzQuNDYyMSAyMi45MTU0VjMxLjI1NDhDMzQuNDYyMSAzMi44OTE2IDMzLjEwMDEgMzQuMjE4NiAzMS40MTk5IDM0LjIxODZIMTguNTc5OEMxNi44OTk2IDM0LjIxODYgMTUuNTM3NiAzMi44OTE2IDE1LjUzNzYgMzEuMjU0OFYyMi45MTU0WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMS43OTAyIDI1LjE2MzZDMjIuMjg4NSAyNS4xNjM2IDIyLjY5MjQgMjUuNTU3MSAyMi42OTI0IDI2LjA0MjVWMjguMTI3M0MyMi42OTI0IDI4LjYxMjcgMjIuMjg4NSAyOS4wMDYyIDIxLjc5MDIgMjkuMDA2MkMyMS4yOTE5IDI5LjAwNjIgMjAuODg4IDI4LjYxMjcgMjAuODg4IDI4LjEyNzNWMjYuMDQyNUMyMC44ODggMjUuNTU3MSAyMS4yOTE5IDI1LjE2MzYgMjEuNzkwMiAyNS4xNjM2Wk0yOC4yMTAzIDI1LjE2MzZDMjguNzA4NSAyNS4xNjM2IDI5LjExMjQgMjUuNTU3MSAyOS4xMTI0IDI2LjA0MjVWMjguMTI3M0MyOS4xMTI0IDI4LjYxMjcgMjguNzA4NSAyOS4wMDYyIDI4LjIxMDMgMjkuMDA2MkMyNy43MTIgMjkuMDA2MiAyNy4zMDgxIDI4LjYxMjcgMjcuMzA4MSAyOC4xMjczVjI2LjA0MjVDMjcuMzA4MSAyNS41NTcxIDI3LjcxMiAyNS4xNjM2IDI4LjIxMDMgMjUuMTYzNlpNMTMuMzk3OSAyNy4wODQ5QzEzLjM5NzkgMjYuNTk5NSAxMy44MDE5IDI2LjIwNiAxNC4zMDAxIDI2LjIwNkgxNi40NDAxQzE2LjkzODQgMjYuMjA2IDE3LjM0MjMgMjYuNTk5NSAxNy4zNDIzIDI3LjA4NDlDMTcuMzQyMyAyNy41NzAzIDE2LjkzODQgMjcuOTYzOCAxNi40NDAxIDI3Ljk2MzhIMTQuMzAwMUMxMy44MDE5IDI3Ljk2MzggMTMuMzk3OSAyNy41NzAzIDEzLjM5NzkgMjcuMDg0OVpNMzIuNjU4MiAyNy4wODQ5QzMyLjY1ODIgMjYuNTk5NSAzMy4wNjIxIDI2LjIwNiAzMy41NjAzIDI2LjIwNkgzNS43MDA0QzM2LjE5ODYgMjYuMjA2IDM2LjYwMjUgMjYuNTk5NSAzNi42MDI1IDI3LjA4NDlDMzYuNjAyNSAyNy41NzAzIDM2LjE5ODYgMjcuOTYzOCAzNS43MDA0IDI3Ljk2MzhIMzMuNTYwM0MzMy4wNjIxIDI3Ljk2MzggMzIuNjU4MiAyNy41NzAzIDMyLjY1ODIgMjcuMDg0OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -23,15 +24,15 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main$n = {};
-const _hoisted_1$m = {
+const _sfc_main$o = {};
+const _hoisted_1$o = {
   width: "18",
   height: "19",
   viewBox: "0 0 18 19",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
-const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
+const _hoisted_2$e = /* @__PURE__ */ createElementVNode("path", {
   d: "M13.5 5L4.5 14M4.5 5L13.5 14",
   stroke: "#374151",
   "stroke-width": "1.5",
@@ -39,13 +40,42 @@ const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
   "stroke-linejoin": "round"
 }, null, -1);
 const _hoisted_3$c = [
+  _hoisted_2$e
+];
+function _sfc_render$n(_ctx, _cache) {
+  return openBlock(), createElementBlock("svg", _hoisted_1$o, _hoisted_3$c);
+}
+var CloseIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$n]]);
+const _sfc_main$n = {};
+const _hoisted_1$n = {
+  width: "14",
+  height: "2",
+  viewBox: "0 0 14 2",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg"
+};
+const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
+  d: "M1 1H13",
+  stroke: "#374151",
+  "stroke-width": "1.58333",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round"
+}, null, -1);
+const _hoisted_3$b = [
   _hoisted_2$d
 ];
 function _sfc_render$m(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$m, _hoisted_3$c);
+  return openBlock(), createElementBlock("svg", _hoisted_1$n, _hoisted_3$b);
 }
-var CloseIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
+var MinimizeIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
 var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
+const _withScopeId$2 = (n) => (pushScopeId("data-v-50210743"), n = n(), popScopeId(), n);
+const _hoisted_1$m = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("div", { class: "sc-message--avatar" }, [
+  /* @__PURE__ */ createElementVNode("img", {
+    src: _imports_0,
+    class: "sc-message--avatar-img"
+  })
+], -1));
 const __default__ = {
   props: {
     icons: {
@@ -54,6 +84,10 @@ const __default__ = {
         return {
           close: {
             img: CloseIconSvg,
+            name: "default"
+          },
+          minimize: {
+            img: MinimizeIconSvg,
             name: "default"
           }
         };
@@ -91,10 +125,17 @@ const _sfc_main$m = Object.assign(__default__, {
         class: "sc-header",
         style: normalizeStyle({ background: __props.colors.header.bg, color: __props.colors.header.text })
       }, [
+        _hoisted_1$m,
+        createElementVNode("div", {
+          class: "sc-header--minimize-button",
+          onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("minimize"))
+        }, [
+          createVNode(MinimizeIconSvg)
+        ]),
         _ctx.showCloseButton ? (openBlock(), createElementBlock("div", {
           key: 0,
           class: "sc-header--close-button",
-          onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("close"))
+          onClick: _cache[1] || (_cache[1] = ($event) => _ctx.$emit("close"))
         }, [
           createVNode(CloseIconSvg)
         ])) : createCommentVNode("", true)
@@ -102,7 +143,7 @@ const _sfc_main$m = Object.assign(__default__, {
     };
   }
 });
-var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-7310a0dc"]]);
+var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-50210743"]]);
 var IconBase_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$l = {
   props: {
@@ -126,7 +167,7 @@ const _sfc_main$l = {
 };
 const _hoisted_1$l = ["width", "height", "aria-labelledby"];
 const _hoisted_2$c = ["id"];
-const _hoisted_3$b = ["fill"];
+const _hoisted_3$a = ["fill"];
 function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -142,7 +183,7 @@ function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
     }, toDisplayString($props.iconName), 9, _hoisted_2$c),
     createElementVNode("g", { fill: $props.iconColor }, [
       renderSlot(_ctx.$slots, "default", {}, void 0, true)
-    ], 8, _hoisted_3$b)
+    ], 8, _hoisted_3$a)
   ], 8, _hoisted_1$l);
 }
 var IconBase = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$l], ["__scopeId", "data-v-e63be5a6"]]);
@@ -1647,7 +1688,7 @@ const _sfc_main$i = {
 };
 const _hoisted_1$i = ["disabled"];
 const _hoisted_2$b = { key: 1 };
-const _hoisted_3$a = ["innerHTML"];
+const _hoisted_3$9 = ["innerHTML"];
 const _hoisted_4$4 = {
   key: 1,
   class: "sc-message--edited"
@@ -1715,7 +1756,7 @@ function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
       createElementVNode("p", {
         class: "sc-message--text-content",
         innerHTML: $options.messageText
-      }, null, 8, _hoisted_3$a),
+      }, null, 8, _hoisted_3$9),
       $props.message.data.meta ? (openBlock(), createElementBlock("p", {
         key: 0,
         class: "sc-message--meta",
@@ -1752,7 +1793,7 @@ const _sfc_main$h = {
 };
 const _hoisted_1$h = { class: "sc-message--file-icon" };
 const _hoisted_2$a = ["src"];
-const _hoisted_3$9 = ["href"];
+const _hoisted_3$8 = ["href"];
 function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "sc-message--file",
@@ -1771,7 +1812,7 @@ function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
       createElementVNode("a", {
         href: $props.data.file.url ? $props.data.file.url : "#",
         target: "_blank"
-      }, toDisplayString($props.data.file.name || ""), 9, _hoisted_3$9)
+      }, toDisplayString($props.data.file.name || ""), 9, _hoisted_3$8)
     ], 4),
     createElementVNode("div", {
       class: "sc-message--file-text",
@@ -1810,14 +1851,14 @@ const _sfc_main$f = {
     }
   }
 };
-const _withScopeId = (n) => (pushScopeId("data-v-244d06fe"), n = n(), popScopeId(), n);
-const _hoisted_1$f = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
-const _hoisted_2$9 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
-const _hoisted_3$8 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _withScopeId$1 = (n) => (pushScopeId("data-v-244d06fe"), n = n(), popScopeId(), n);
+const _hoisted_1$f = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _hoisted_2$9 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
+const _hoisted_3$7 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", null, null, -1));
 const _hoisted_4$3 = [
   _hoisted_1$f,
   _hoisted_2$9,
-  _hoisted_3$8
+  _hoisted_3$7
 ];
 function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
@@ -1856,8 +1897,7 @@ function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
 }
 var SystemMessage = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e], ["__scopeId", "data-v-0c1d322a"]]);
 var chatIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSItNDc0OS40OCAtNTAyMCAzNS4wMzYgMzUuMDM2Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO30uYntmaWxsOiM0ZThjZmY7fS5je2NsaXAtcGF0aDp1cmwoI2EpO30uZHtmaWxsOiNmZmY7fS5le2ZpbGw6I2VmZjRmOTt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImEiPjxwYXRoIGNsYXNzPSJhIiBkPSJNMC0zOTkuNDc5SDE3LjU1NXYxNy41NTVIMFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMzk5LjQ3OSkiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDg4NiAtNTA3NSkiPjxjaXJjbGUgY2xhc3M9ImIiIGN4PSIxNy41MTgiIGN5PSIxNy41MTgiIHI9IjE3LjUxOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM2LjUyIDU1KSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0NS4xMyA2NCkiPjxnIGNsYXNzPSJjIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDApIj48cGF0aCBjbGFzcz0iZCIgZD0iTS0zODEuOTI0LTE5MC45NjJhOC43NzgsOC43NzgsMCwwLDAtOC43NzgtOC43NzgsOC43NzgsOC43NzgsMCwwLDAtOC43NzgsOC43NzgsOC43NDUsOC43NDUsMCwwLDAsMi4yNiw1Ljg3OXYxLjQ0MmMwLC44LjQ5MiwxLjQ1NywxLjEsMS40NTdoNS44M2EuODQzLjg0MywwLDAsMCwuMTgzLS4wMiw4Ljc3OCw4Ljc3OCwwLDAsMCw4LjE4NC04Ljc1NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzk5LjQ3OSAxOTkuNzQpIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiPjxwYXRoIGNsYXNzPSJlIiBkPSJNLTY4Ljc2My0xOTQuMDc5YTkuMjkyLDkuMjkyLDAsMCwxLDYuMzgtOC44ODhjLS4yNTItLjAyMi0uNTA2LS4wMzMtLjc2My0uMDMzYTguNzc0LDguNzc0LDAsMCwwLTguNzc4LDguNzc4QTkuNTA4LDkuNTA4LDAsMCwwLTY5LjctMTg4LjNjLjAwNSwwLDAsLjAwOSwwLC4wMS0uMzExLjM1Mi0xLjkyNCwyLjg0OS4wMjEsMi44NDloMi4yNWMtMS4yMy0uMDIyLDEuMjYzLTIuMTA3LjI2OS0zLjQ5NGE4LjIyNSw4LjIyNSwwLDAsMS0xLjYtNS4xNDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcxLjkyNCAyMDMpIi8+PC9nPjwvZz48L2c+PC9nPjwvc3ZnPg==";
-var _imports_0 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiByeD0iMjUiIGZpbGw9Im5vbmUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOS44MTg0IDE2LjY2MDZDMTkuODE4NCAxNi4xNzUyIDIwLjIyMjMgMTUuNzgxNyAyMC43MjA1IDE1Ljc4MTdIMjUuMDAwNkMyNS40OTg4IDE1Ljc4MTcgMjUuOTAyNyAxNi4xNzUyIDI1LjkwMjcgMTYuNjYwNlYyMC44MzAzQzI1LjkwMjcgMjEuMzE1NyAyNS40OTg4IDIxLjcwOTIgMjUuMDAwNiAyMS43MDkyQzI0LjUwMjMgMjEuNzA5MiAyNC4wOTg0IDIxLjMxNTcgMjQuMDk4NCAyMC44MzAzVjE3LjUzOTZIMjAuNzIwNUMyMC4yMjIzIDE3LjUzOTYgMTkuODE4NCAxNy4xNDYxIDE5LjgxODQgMTYuNjYwNloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTguNTc5OCAyMS43MDk1QzE3Ljg5NjEgMjEuNzA5NSAxNy4zNDE5IDIyLjI0OTQgMTcuMzQxOSAyMi45MTU0VjMxLjI1NDhDMTcuMzQxOSAzMS45MjA4IDE3Ljg5NjEgMzIuNDYwNyAxOC41Nzk4IDMyLjQ2MDdIMzEuNDE5OUMzMi4xMDM2IDMyLjQ2MDcgMzIuNjU3OCAzMS45MjA4IDMyLjY1NzggMzEuMjU0OFYyMi45MTU0QzMyLjY1NzggMjIuMjQ5NCAzMi4xMDM2IDIxLjcwOTUgMzEuNDE5OSAyMS43MDk1SDE4LjU3OThaTTE1LjUzNzYgMjIuOTE1NEMxNS41Mzc2IDIxLjI3ODYgMTYuODk5NiAxOS45NTE3IDE4LjU3OTggMTkuOTUxN0gzMS40MTk5QzMzLjEwMDEgMTkuOTUxNyAzNC40NjIxIDIxLjI3ODYgMzQuNDYyMSAyMi45MTU0VjMxLjI1NDhDMzQuNDYyMSAzMi44OTE2IDMzLjEwMDEgMzQuMjE4NiAzMS40MTk5IDM0LjIxODZIMTguNTc5OEMxNi44OTk2IDM0LjIxODYgMTUuNTM3NiAzMi44OTE2IDE1LjUzNzYgMzEuMjU0OFYyMi45MTU0WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMS43OTAyIDI1LjE2MzZDMjIuMjg4NSAyNS4xNjM2IDIyLjY5MjQgMjUuNTU3MSAyMi42OTI0IDI2LjA0MjVWMjguMTI3M0MyMi42OTI0IDI4LjYxMjcgMjIuMjg4NSAyOS4wMDYyIDIxLjc5MDIgMjkuMDA2MkMyMS4yOTE5IDI5LjAwNjIgMjAuODg4IDI4LjYxMjcgMjAuODg4IDI4LjEyNzNWMjYuMDQyNUMyMC44ODggMjUuNTU3MSAyMS4yOTE5IDI1LjE2MzYgMjEuNzkwMiAyNS4xNjM2Wk0yOC4yMTAzIDI1LjE2MzZDMjguNzA4NSAyNS4xNjM2IDI5LjExMjQgMjUuNTU3MSAyOS4xMTI0IDI2LjA0MjVWMjguMTI3M0MyOS4xMTI0IDI4LjYxMjcgMjguNzA4NSAyOS4wMDYyIDI4LjIxMDMgMjkuMDA2MkMyNy43MTIgMjkuMDA2MiAyNy4zMDgxIDI4LjYxMjcgMjcuMzA4MSAyOC4xMjczVjI2LjA0MjVDMjcuMzA4MSAyNS41NTcxIDI3LjcxMiAyNS4xNjM2IDI4LjIxMDMgMjUuMTYzNlpNMTMuMzk3OSAyNy4wODQ5QzEzLjM5NzkgMjYuNTk5NSAxMy44MDE5IDI2LjIwNiAxNC4zMDAxIDI2LjIwNkgxNi40NDAxQzE2LjkzODQgMjYuMjA2IDE3LjM0MjMgMjYuNTk5NSAxNy4zNDIzIDI3LjA4NDlDMTcuMzQyMyAyNy41NzAzIDE2LjkzODQgMjcuOTYzOCAxNi40NDAxIDI3Ljk2MzhIMTQuMzAwMUMxMy44MDE5IDI3Ljk2MzggMTMuMzk3OSAyNy41NzAzIDEzLjM5NzkgMjcuMDg0OVpNMzIuNjU4MiAyNy4wODQ5QzMyLjY1ODIgMjYuNTk5NSAzMy4wNjIxIDI2LjIwNiAzMy41NjAzIDI2LjIwNkgzNS43MDA0QzM2LjE5ODYgMjYuMjA2IDM2LjYwMjUgMjYuNTk5NSAzNi42MDI1IDI3LjA4NDlDMzYuNjAyNSAyNy41NzAzIDM2LjE5ODYgMjcuOTYzOCAzNS43MDA0IDI3Ljk2MzhIMzMuNTYwM0MzMy4wNjIxIDI3Ljk2MzggMzIuNjU4MiAyNy41NzAzIDMyLjY1ODIgMjcuMDg0OVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=";
-var Message_vue_vue_type_style_index_0_lang = "";
+var Message_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$d = {
   components: {
     TextMessage,
@@ -1916,14 +1956,15 @@ const _sfc_main$d = {
     }
   }
 };
+const _withScopeId = (n) => (pushScopeId("data-v-441542e8"), n = n(), popScopeId(), n);
 const _hoisted_1$e = ["id"];
 const _hoisted_2$8 = ["title"];
-const _hoisted_3$7 = /* @__PURE__ */ createElementVNode("img", {
+const _hoisted_3$6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("img", {
   src: _imports_0,
   class: "sc-message--avatar-img"
-}, null, -1);
+}, null, -1));
 const _hoisted_4$2 = [
-  _hoisted_3$7
+  _hoisted_3$6
 ];
 function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_TextMessage = resolveComponent("TextMessage");
@@ -1954,7 +1995,7 @@ function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
         }, _hoisted_4$2, 8, _hoisted_2$8)), [
           [_directive_tooltip, $options.authorName]
         ]) : createCommentVNode("", true)
-      ]),
+      ], true),
       $props.message.type === "text" ? (openBlock(), createBlock(_component_TextMessage, {
         key: 0,
         message: $props.message,
@@ -1970,13 +2011,13 @@ function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
             messageText: scopedProps.messageText,
             messageColors: scopedProps.messageColors,
             me: scopedProps.me
-          })
+          }, void 0, true)
         ]),
         "text-message-toolbox": withCtx((scopedProps) => [
           renderSlot(_ctx.$slots, "text-message-toolbox", {
             message: scopedProps.message,
             me: scopedProps.me
-          })
+          }, void 0, true)
         ]),
         _: 3
       }, 8, ["message", "message-colors", "message-styling", "show-confirmation-deletion", "confirmation-deletion-message"])) : $props.message.type === "emoji" ? (openBlock(), createBlock(_component_EmojiMessage, {
@@ -1997,14 +2038,14 @@ function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
         default: withCtx(() => [
           renderSlot(_ctx.$slots, "system-message-body", {
             message: $props.message.data
-          })
+          }, void 0, true)
         ]),
         _: 3
       }, 8, ["data", "message-colors"])) : createCommentVNode("", true)
     ], 2)
   ], 8, _hoisted_1$e);
 }
-var Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d]]);
+var Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d], ["__scopeId", "data-v-441542e8"]]);
 var MessageList_vue_vue_type_style_index_0_scoped_true_lang = "";
 let resizeObserver;
 const _sfc_main$c = {
@@ -5610,7 +5651,7 @@ const _sfc_main$b = {
 };
 const _hoisted_1$d = { class: "sc-emoji-picker--content" };
 const _hoisted_2$7 = { class: "sc-emoji-picker--category-title" };
-const _hoisted_3$6 = ["onClick"];
+const _hoisted_3$5 = ["onClick"];
 function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     ref: "domNode",
@@ -5630,7 +5671,7 @@ function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
               key: emoji2,
               class: "sc-emoji-picker--emoji",
               onClick: ($event) => $options.emojiClicked(emoji2)
-            }, toDisplayString(emoji2), 9, _hoisted_3$6);
+            }, toDisplayString(emoji2), 9, _hoisted_3$5);
           }), 128))
         ]);
       }), 128))
@@ -5751,7 +5792,7 @@ const _hoisted_2$6 = {
   class: "sc-user-input--file-icon-wrapper",
   type: "button"
 };
-const _hoisted_3$5 = {
+const _hoisted_3$4 = {
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   class: "sc-user-input--file-icon",
@@ -5765,7 +5806,7 @@ const _hoisted_3$5 = {
 function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", _hoisted_1$b, [
     createElementVNode("button", _hoisted_2$6, [
-      (openBlock(), createElementBlock("svg", _hoisted_3$5, [
+      (openBlock(), createElementBlock("svg", _hoisted_3$4, [
         createElementVNode("path", {
           style: normalizeStyle({ fill: $props.color }),
           d: "M20.807 10.22l-2.030-2.029-10.15 10.148c-1.682 1.681-1.682 4.408 0 6.089s4.408 1.681 6.090 0l12.18-12.178c2.804-2.802 2.804-7.346 0-10.148-2.802-2.803-7.347-2.803-10.149 0l-12.788 12.787c-0.009 0.009-0.019 0.018-0.027 0.026-3.909 3.909-3.909 10.245 0 14.153 3.908 3.908 10.246 3.908 14.156 0 0.009-0.009 0.016-0.018 0.026-0.027l0.001 0.001 8.729-8.728-2.031-2.029-8.729 8.727c-0.009 0.008-0.018 0.018-0.026 0.026-2.784 2.783-7.312 2.783-10.096 0-2.783-2.783-2.783-7.31 0-10.093 0.010-0.009 0.019-0.018 0.028-0.026l-0.001-0.002 12.79-12.786c1.678-1.679 4.411-1.679 6.090 0s1.678 4.411 0 6.089l-12.18 12.178c-0.56 0.56-1.47 0.56-2.030 0-0.559-0.559-0.559-1.47 0-2.029l10.15-10.149z"
@@ -5799,11 +5840,11 @@ const _hoisted_2$5 = /* @__PURE__ */ createElementVNode("g", { id: "SVG" }, [
     "stroke-linejoin": "round"
   })
 ], -1);
-const _hoisted_3$4 = [
+const _hoisted_3$3 = [
   _hoisted_2$5
 ];
 function _sfc_render$8(_ctx, _cache) {
-  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$4);
+  return openBlock(), createElementBlock("svg", _hoisted_1$a, _hoisted_3$3);
 }
 var IconUpload = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8]]);
 var UserInputButton_vue_vue_type_style_index_0_scoped_true_lang = "";
@@ -6128,7 +6169,7 @@ const _sfc_main$3 = {
 };
 const _hoisted_1$5 = { class: "icon-file-message" };
 const _hoisted_2$4 = ["src", "alt"];
-const _hoisted_3$3 = ["src", "alt"];
+const _hoisted_3$2 = ["src", "alt"];
 const _hoisted_4$1 = { class: "sc-user-input--buttons" };
 const _hoisted_5$1 = {
   key: 0,
@@ -6142,7 +6183,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_IconSend = resolveComponent("IconSend");
   return openBlock(), createElementBlock("div", {
     class: "sc-user-input-wrap",
-    style: normalizeStyle({ background: $props.colors.userInput.bg })
+    style: normalizeStyle({ backgroundColor: $props.colors.messageList.bg })
   }, [
     $data.file ? (openBlock(), createElementBlock("div", {
       key: 0,
@@ -6169,7 +6210,7 @@ function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
           alt: $props.icons.closeSvg.name,
           height: "10",
           title: "Remove the file"
-        }, null, 8, _hoisted_3$3)
+        }, null, 8, _hoisted_3$2)
       ])
     ], 4)) : createCommentVNode("", true),
     createElementVNode("form", {
@@ -6257,7 +6298,7 @@ const _sfc_main$2 = {
 };
 const _hoisted_1$4 = { style: { "padding-top": "5px" } };
 const _hoisted_2$3 = { style: { "text-align": "center" } };
-const _hoisted_3$2 = ["src"];
+const _hoisted_3$1 = ["src"];
 function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "user-list",
@@ -6273,7 +6314,7 @@ function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
               createElementVNode("img", {
                 src: user.imageUrl,
                 class: "img-msg"
-              }, null, 8, _hoisted_3$2)
+              }, null, 8, _hoisted_3$1)
             ]),
             createElementVNode("td", {
               class: "user-element",
@@ -6362,7 +6403,8 @@ const _sfc_main$1 = {
   },
   data() {
     return {
-      showUserList: false
+      showUserList: false,
+      minimized: false
     };
   },
   computed: {
@@ -6371,12 +6413,22 @@ const _sfc_main$1 = {
       return messages;
     }
   },
+  watch: {
+    isOpen(newVal) {
+      if (newVal) {
+        this.minimized = false;
+      }
+    }
+  },
   methods: {
     handleUserListToggle(showUserList) {
       this.showUserList = showUserList;
     },
     getSuggestions() {
       return this.messages.length > 0 ? this.messages[this.messages.length - 1].suggestions : [];
+    },
+    handleMinimize() {
+      this.minimized = !this.minimized;
     }
   }
 };
@@ -6386,20 +6438,21 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_MessageList = resolveComponent("MessageList");
   const _component_UserInput = resolveComponent("UserInput");
   return openBlock(), createElementBlock("div", {
-    class: normalizeClass(["sc-chat-window", { opened: $props.isOpen, closed: !$props.isOpen }])
+    class: normalizeClass(["sc-chat-window", { opened: $props.isOpen, closed: !$props.isOpen, minimized: $data.minimized }])
   }, [
     $props.showHeader ? (openBlock(), createBlock(_component_Header, {
       key: 0,
       title: $props.title,
       colors: $props.colors,
       onClose: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("close")),
+      onMinimize: $options.handleMinimize,
       onUserList: $options.handleUserListToggle
     }, {
       default: withCtx(() => [
         renderSlot(_ctx.$slots, "header", {}, void 0, true)
       ]),
       _: 3
-    }, 8, ["title", "colors", "onUserList"])) : createCommentVNode("", true),
+    }, 8, ["title", "colors", "onMinimize", "onUserList"])) : createCommentVNode("", true),
     $data.showUserList ? (openBlock(), createBlock(_component_UserList, {
       key: 1,
       colors: $props.colors,
@@ -6459,7 +6512,7 @@ function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     }, null, 8, ["show-emoji", "show-emoji-in-text", "on-submit", "suggestions", "show-file", "placeholder", "colors"])) : createCommentVNode("", true)
   ], 2);
 }
-var ChatWindow = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__scopeId", "data-v-3f1be203"]]);
+var ChatWindow = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render$1], ["__scopeId", "data-v-403c9968"]]);
 var CloseIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAKVQTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////uP3jVQAAADd0Uk5TAE9lCAXd9XA4y/9zDQJG7HYB8Hc3yHoPQ8fuezMSoYPrEcEugj0tqb6G+Lw5ifHcKk3SIAx/MjRpS8YAAADsSURBVHic7dDJDoIwEIDhQURwQNGiIBVkUQH3BfX9H00MEvHW9qj9L3RIvkxTAJlMJvu1lI7aHtWOwm67Wk9vz3pP67Jro4+m1QyWiX2D3cJgqNmjt7ZGtjYccGAYK8R26qNjE2XMY6smU3Q9AM/F6YSTVrtnPp173pz6M969Lx1Q6rqUBgK2KvAR/UCIAoQLxEUoiCMSxyQSokmE6XKZYpQI2BVJ1wDrlKz4dXXn7PXN+G8e5lhk9TErMOd6tXCz3e2bYb/bbnj04Xg6f6bz6Xhgtxe8lu25vOKFGd/uj+8fj/uNfbVMJpP9QU/STxAzeUFqVwAAAABJRU5ErkJggg==";
 var OpenIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiPjxyZWN0IGlkPSJiYWNrZ3JvdW5kcmVjdCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgeD0iMCIgeT0iMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJub25lIi8+PGRlZnM+PHN0eWxlPi5he2ZpbGw6bm9uZTt9LmJ7ZmlsbDojNGU4Y2ZmO30uY3tjbGlwLXBhdGg6dXJsKCNhKTt9LmR7ZmlsbDojZmZmO30uZXtmaWxsOiNlZmY0Zjk7fTwvc3R5bGU+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBjbGFzcz0iYSIgZD0iTSAwIDAgSCAxNy41NTUgdiAxNy41NTUgSCAwIFoiIGlkPSJzdmdfMSIgdHJhbnNmb3JtPSIiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGFzcz0iY3VycmVudExheWVyIiBzdHlsZT0iIj48dGl0bGU+TGF5ZXIgMTwvdGl0bGU+PGcgaWQ9InN2Z18yIiBjbGFzcz0ic2VsZWN0ZWQiIHRyYW5zZm9ybT0iIj48ZyBpZD0ic3ZnXzMiIHRyYW5zZm9ybT0iIj48ZyBjbGFzcz0iYyIgaWQ9InN2Z180IiB0cmFuc2Zvcm09IiI+PGcgaWQ9InN2Z181IiB0cmFuc2Zvcm09IiI+PHBhdGggY2xhc3M9ImQiIGQ9Ik0gMTcuNTU2IDguNzc4NDIgYSA4Ljc3OCA4Ljc3OCAwIDAgMCAtOC43NzggLTguNzc4IGEgOC43NzggOC43NzggMCAwIDAgLTguNzc4IDguNzc4IGEgOC43NDUgOC43NDUgMCAwIDAgMi4yNiA1Ljg3OSB2IDEuNDQyIGMgMCAwLjggMC40OTIgMS40NTcgMS4xIDEuNDU3IGggNS44MyBhIDAuODQzIDAuODQzIDAgMCAwIDAuMTgzIC0wLjAyIGEgOC43NzggOC43NzggMCAwIDAgOC4xODQgLTguNzU3IiBpZD0ic3ZnXzYiIHRyYW5zZm9ybT0iIi8+PC9nPjxnIGlkPSJzdmdfNyIgdHJhbnNmb3JtPSIiPjxwYXRoIGNsYXNzPSJlIiBkPSJNIDMuMTYxNDggOC45MjEgYSA5LjI5MiA5LjI5MiAwIDAgMSA2LjM4IC04Ljg4OCBjIC0wLjI1MiAtMC4wMjIgLTAuNTA2IC0wLjAzMyAtMC43NjMgLTAuMDMzIGEgOC43NzQgOC43NzQgMCAwIDAgLTguNzc4IDguNzc4IEEgOS41MDggOS41MDggMCAwIDAgMi4yMjQ0NyAxNC43MDAzIGMgMC4wMDUgMCAwIDAuMDA5IDAgMC4wMSBjIC0wLjMxMSAwLjM1MiAtMS45MjQgMi44NDkgMC4wMjEgMi44NDkgaCAyLjI1IGMgLTEuMjMgLTAuMDIyIDEuMjYzIC0yLjEwNyAwLjI2OSAtMy40OTQgYSA4LjIyNSA4LjIyNSAwIDAgMSAtMS42IC01LjE0MSIgaWQ9InN2Z184IiB0cmFuc2Zvcm09IiIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9zdmc+";
 var Launcher_vue_vue_type_style_index_0_scoped_true_lang = "";
@@ -6649,8 +6702,7 @@ const _hoisted_1$3 = {
   key: 0,
   class: "sc-new-messsages-count"
 };
-const _hoisted_2$2 = ["src", "alt"];
-const _hoisted_3$1 = ["alt"];
+const _hoisted_2$2 = ["alt"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_ChatWindow = resolveComponent("ChatWindow");
   return openBlock(), createElementBlock("div", null, [
@@ -6661,17 +6713,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: _cache[0] || (_cache[0] = withModifiers(($event) => $props.isOpen ? $props.close() : $options.openAndFocus(), ["prevent"]))
     }, [
       $props.newMessagesCount > 0 && !$props.isOpen ? (openBlock(), createElementBlock("div", _hoisted_1$3, toDisplayString($props.newMessagesCount), 1)) : createCommentVNode("", true),
-      $props.isOpen ? (openBlock(), createElementBlock("img", {
-        key: 1,
-        class: "sc-closed-icon",
-        src: $props.icons.close.img,
-        alt: $props.icons.close.name
-      }, null, 8, _hoisted_2$2)) : (openBlock(), createElementBlock("img", {
-        key: 2,
+      createElementVNode("img", {
         class: "sc-open-icon",
         src: _imports_0,
         alt: $props.icons.open.name
-      }, null, 8, _hoisted_3$1))
+      }, null, 8, _hoisted_2$2)
     ], 6)) : createCommentVNode("", true),
     createVNode(_component_ChatWindow, {
       "message-list": $props.messageList,
@@ -6728,7 +6774,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }, 8, ["message-list", "on-user-input-submit", "participants", "title", "is-open", "show-emoji", "show-emoji-in-text", "show-file", "show-confirmation-deletion", "confirmation-deletion-message", "show-header", "placeholder", "show-typing-indicator", "colors", "always-scroll-to-bottom", "message-styling", "onClose"])
   ]);
 }
-var Launcher = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-72d8ca28"]]);
+var Launcher = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-2fd33336"]]);
 var top = "top";
 var bottom = "bottom";
 var right = "right";

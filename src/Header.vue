@@ -1,6 +1,12 @@
 <template>
   <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}">
+    <div class="sc-message--avatar">
+      <img src="./assets/boticon.svg" class="sc-message--avatar-img"/>
 
+    </div>
+    <div class="sc-header--minimize-button"  @click="$emit('minimize')">
+      <MinimizeIconSvg/>
+    </div>
     <div v-if="showCloseButton" class="sc-header--close-button" @click="$emit('close')">
       <CloseIconSvg/>
     </div>
@@ -9,6 +15,7 @@
 
 <script setup>
 import CloseIconSvg from './assets/x-close.vue'
+import MinimizeIconSvg from './assets/minimize.vue'
 </script>
 
 <script>
@@ -21,7 +28,11 @@ export default {
       default: function () {
         return {
           close: {
-            img: CloseIconSvg, // Changed from CloseIcon to CloseIconSvg
+            img: CloseIconSvg,
+            name: 'default'
+          },
+          minimize: {
+            img: MinimizeIconSvg,
             name: 'default'
           }
         }
@@ -55,13 +66,17 @@ export default {
 
 <style scoped>
 .sc-header {
-  min-height: 45px;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-  padding: 10px;
+  height: 48px;
+  min-height: 48px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 0px 10px;  
   position: relative;
   box-sizing: border-box;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
 }
 
 .sc-header--img {
@@ -87,24 +102,27 @@ export default {
   box-shadow: 0px 2px 5px rgba(0.2, 0.2, 0.5, 0.1);
 }
 
-.sc-header--close-button {
+.sc-header--close-button, .sc-header--minimize-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 100%;
-  margin-right: 10px;
+  width: 25px;
+  height: 25px;
   box-sizing: border-box;
   cursor: pointer;
-  border-radius: 5px;
-  margin-left: auto;
+  border-radius: 50%
+}
+
+.sc-header--close-button {
+  margin-right: 10px;
 }
 
 
-.sc-header--close-button:hover {
-  box-shadow: 0px 2px 5px rgba(0.2, 0.2, 0.5, 0.1);
-}
 
+.sc-header--close-button:hover, .sc-header--minimize-button:hover {
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
 
 
 @media (max-width: 450px) {
@@ -112,4 +130,24 @@ export default {
     border-radius: 0px;
   }
 }
+
+
+
+.sc-message--avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin-right: auto;
+  background-color: #1677FF;
+  margin-left: 5px;
+}
+
+.sc-message--avatar-img {
+  height: 100%;
+  width: 100%; 
+  object-fit: cover;
+  border-radius: 50%; 
+}
+
 </style>
+

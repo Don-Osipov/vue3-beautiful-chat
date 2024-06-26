@@ -1,10 +1,11 @@
 <template>
-  <div class="sc-chat-window" :class="{opened: isOpen, closed: !isOpen}">
+  <div class="sc-chat-window" :class="{opened: isOpen, closed: !isOpen, minimized: minimized}">
     <Header
       v-if="showHeader"
       :title="title"
       :colors="colors"
       @close="$emit('close')"
+      @minimize="handleMinimize"
       @userList="handleUserListToggle"
     >
       <slot name="header"> </slot>
@@ -140,7 +141,8 @@ export default {
   },
   data() {
     return {
-      showUserList: false
+      showUserList: false,
+      minimized: false
     }
   },
   computed: {
@@ -150,12 +152,22 @@ export default {
       return messages
     }
   },
+  watch: {
+    isOpen(newVal) {
+      if (newVal) {
+        this.minimized = false;
+      }
+    }
+  },
   methods: {
     handleUserListToggle(showUserList) {
       this.showUserList = showUserList
     },
     getSuggestions() {
       return this.messages.length > 0 ? this.messages[this.messages.length - 1].suggestions : []
+    },
+    handleMinimize() {
+      this.minimized = !this.minimized
     }
   }
 }
@@ -163,26 +175,27 @@ export default {
 
 <style scoped>
 .sc-chat-window {
-  max-width: 500px;
+  max-width: 550px;
   width: 90%;
   height: calc(100% - 120px);
-  max-height: 590px;
+  max-height: 670px;
   position: fixed;
   right: 25px;
-  bottom: 100px;
+  bottom: 0px;
   box-sizing: border-box;
   box-shadow: 0px 7px 40px 2px rgba(148, 149, 150, 0.1);
   background: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-radius: 16px ;
+  border-radius: 16px 16px 0px 0px ;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   animation: fadeIn;
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   gap: 0px;
   border: 1px solid #D4DCE8;
+  transition: transform 0.3s ease-in-out, max-width 0.3s ease-in-out; 
 }
 
 .sc-chat-window.closed {
@@ -192,7 +205,7 @@ export default {
 }
 
 @keyframes fadeIn {
-  0% {
+   0% {
     display: none;
     opacity: 0;
   }
@@ -201,6 +214,11 @@ export default {
     display: flex;
     opacity: 1;
   }
+}
+
+.sc-chat-window.minimized {
+  transform: translateY(calc(100% - 48px));
+  max-width: 350px;
 }
 
 .sc-message--me {

@@ -1,5 +1,5 @@
 <template>
-  <div class="sc-user-input-wrap"  :style="{background: colors.userInput.bg}">
+  <div class="sc-user-input-wrap"  :style="{backgroundColor: colors.messageList.bg}">
     <div
       v-if="file"
       class="file-container"
@@ -338,8 +338,6 @@ export default {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 
@@ -348,11 +346,11 @@ export default {
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  border-radius: 1rem; /* 16px */
+  border-radius: 8px; /* 16px */
   border: 1px solid #d1d5db; /* Tailwind's gray-300 */
   background-color: #ffffff;
   cursor: text;
-  margin-bottom: .8rem; 
+  margin-bottom: 1.5rem; 
   margin-top: .8rem; 
   box-sizing: border-box;
 }

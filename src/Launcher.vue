@@ -10,8 +10,8 @@
       <div v-if="newMessagesCount > 0 && !isOpen" class="sc-new-messsages-count">
         {{ newMessagesCount }}
       </div>
-      <img v-if="isOpen" class="sc-closed-icon" :src="icons.close.img" :alt="icons.close.name" />
-      <img v-else class="sc-open-icon" src="./assets/boticon.svg" :alt="icons.open.name" />
+      <!-- <img v-if="isOpen" class="sc-closed-icon" :src="icons.close.img" :alt="icons.close.name" /> -->
+      <img class="sc-open-icon" src="./assets/boticon.svg" :alt="icons.open.name" />
     </div>
     <ChatWindow
       :message-list="messageList"
@@ -315,14 +315,23 @@ export default {
   opacity: 1;
 }
 
+.sc-launcher.opened {
+  opacity: 0;
+  transition: opacity 50ms ease-in-out;
+}
+.sc-launcher.opened .sc-closed-icon .sc-open-icon {
+  opacity: 0;
+  transition: opacity 50ms ease-in-out;
+}
+
 .sc-launcher.opened .sc-open-icon {
-  transform: rotate(-90deg);
-  opacity: 1;
+  /* transform: rotate(-90deg);
+  opacity: 1; */
 }
 
 .sc-launcher.opened .sc-closed-icon {
-  transform: rotate(-90deg);
-  opacity: 1;
+  /* transform: rotate(-90deg);
+  opacity: 1; */
 }
 
 .sc-launcher.opened:before {
