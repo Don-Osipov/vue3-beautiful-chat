@@ -32,7 +32,7 @@ const _hoisted_1$o = {
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
-const _hoisted_2$e = /* @__PURE__ */ createElementVNode("path", {
+const _hoisted_2$f = /* @__PURE__ */ createElementVNode("path", {
   d: "M13.5 5L4.5 14M4.5 5L13.5 14",
   stroke: "#374151",
   "stroke-width": "1.5",
@@ -40,7 +40,7 @@ const _hoisted_2$e = /* @__PURE__ */ createElementVNode("path", {
   "stroke-linejoin": "round"
 }, null, -1);
 const _hoisted_3$c = [
-  _hoisted_2$e
+  _hoisted_2$f
 ];
 function _sfc_render$n(_ctx, _cache) {
   return openBlock(), createElementBlock("svg", _hoisted_1$o, _hoisted_3$c);
@@ -54,7 +54,7 @@ const _hoisted_1$n = {
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
-const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
+const _hoisted_2$e = /* @__PURE__ */ createElementVNode("path", {
   d: "M1 1H13",
   stroke: "#374151",
   "stroke-width": "1.58333",
@@ -62,20 +62,21 @@ const _hoisted_2$d = /* @__PURE__ */ createElementVNode("path", {
   "stroke-linejoin": "round"
 }, null, -1);
 const _hoisted_3$b = [
-  _hoisted_2$d
+  _hoisted_2$e
 ];
 function _sfc_render$m(_ctx, _cache) {
   return openBlock(), createElementBlock("svg", _hoisted_1$n, _hoisted_3$b);
 }
 var MinimizeIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
 var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _withScopeId$2 = (n) => (pushScopeId("data-v-50210743"), n = n(), popScopeId(), n);
-const _hoisted_1$m = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("div", { class: "sc-message--avatar" }, [
-  /* @__PURE__ */ createElementVNode("img", {
-    src: _imports_0,
-    class: "sc-message--avatar-img"
-  })
-], -1));
+const _withScopeId$2 = (n) => (pushScopeId("data-v-4e931614"), n = n(), popScopeId(), n);
+const _hoisted_1$m = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("img", {
+  src: _imports_0,
+  class: "sc-message--avatar-img"
+}, null, -1));
+const _hoisted_2$d = [
+  _hoisted_1$m
+];
 const __default__ = {
   props: {
     icons: {
@@ -104,7 +105,8 @@ const __default__ = {
   },
   data() {
     return {
-      inUserList: false
+      inUserList: false,
+      minimized: false
     };
   },
   computed: {
@@ -114,6 +116,10 @@ const __default__ = {
     toggleUserList() {
       this.inUserList = !this.inUserList;
       this.$emit("userList", this.inUserList);
+    },
+    toggleMinimize() {
+      this.minimized = !this.minimized;
+      this.$emit("minimize");
     }
   }
 };
@@ -125,10 +131,13 @@ const _sfc_main$m = Object.assign(__default__, {
         class: "sc-header",
         style: normalizeStyle({ background: __props.colors.header.bg, color: __props.colors.header.text })
       }, [
-        _hoisted_1$m,
+        createElementVNode("div", {
+          class: "sc-message--avatar",
+          style: normalizeStyle({ opacity: _ctx.minimized ? 1 : 0 })
+        }, _hoisted_2$d, 4),
         createElementVNode("div", {
           class: "sc-header--minimize-button",
-          onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("minimize"))
+          onClick: _cache[0] || (_cache[0] = (...args) => _ctx.toggleMinimize && _ctx.toggleMinimize(...args))
         }, [
           createVNode(MinimizeIconSvg)
         ]),
@@ -143,7 +152,7 @@ const _sfc_main$m = Object.assign(__default__, {
     };
   }
 });
-var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-50210743"]]);
+var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-4e931614"]]);
 var IconBase_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$l = {
   props: {

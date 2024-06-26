@@ -1,10 +1,9 @@
 <template>
   <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}">
-    <div class="sc-message--avatar">
+    <div class="sc-message--avatar" :style="{ opacity: minimized ? 1 : 0 }">
       <img src="./assets/boticon.svg" class="sc-message--avatar-img"/>
-
     </div>
-    <div class="sc-header--minimize-button"  @click="$emit('minimize')">
+    <div class="sc-header--minimize-button" @click="toggleMinimize">
       <MinimizeIconSvg/>
     </div>
     <div v-if="showCloseButton" class="sc-header--close-button" @click="$emit('close')">
@@ -49,7 +48,8 @@ export default {
   },
   data() {
     return {
-      inUserList: false
+      inUserList: false,
+      minimized: false
     }
   },
   computed: {
@@ -59,6 +59,10 @@ export default {
     toggleUserList() {
       this.inUserList = !this.inUserList
       this.$emit('userList', this.inUserList)
+    },
+    toggleMinimize() {
+      this.minimized = !this.minimized
+      this.$emit('minimize'); 
     }
   }
 }
@@ -117,21 +121,16 @@ export default {
   margin-right: 10px;
 }
 
-
-
 .sc-header--close-button:hover, .sc-header--minimize-button:hover {
   background-color: white;
   transition: background-color 0.3s ease;
 }
-
 
 @media (max-width: 450px) {
   .sc-header {
     border-radius: 0px;
   }
 }
-
-
 
 .sc-message--avatar {
   height: 35px;
@@ -140,6 +139,8 @@ export default {
   margin-right: auto;
   background-color: #1677FF;
   margin-left: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .sc-message--avatar-img {
@@ -148,6 +149,4 @@ export default {
   object-fit: cover;
   border-radius: 50%; 
 }
-
 </style>
-
