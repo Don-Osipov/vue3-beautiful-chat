@@ -1,6 +1,6 @@
 <template>
   <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}">
-    <div class="sc-message--avatar" :style="{ opacity: minimized ? 1 : 0 }">
+    <div class="sc-message--avatar" :class="{ 'minimized': minimized }" :style="{ opacity: minimized ? 1 : 0 }">
       <img src="./assets/boticon.svg" class="sc-message--avatar-img"/>
     </div>
     <div class="sc-header--minimize-button" @click="toggleMinimize">
@@ -140,7 +140,11 @@ export default {
   background-color: #1677FF;
   margin-left: 5px;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease-out;
+}
+
+.sc-message--avatar.minimized {
+  transition: opacity 0.5s ease-in;
 }
 
 .sc-message--avatar-img {
