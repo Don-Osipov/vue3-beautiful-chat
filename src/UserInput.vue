@@ -369,6 +369,7 @@ export default {
   border-radius: 1rem 0 0 1rem; /* 16px */
   outline: none;
   box-sizing: border-box;
+  cursor: text;
 }
 
 .focus-within\\:ring-2:focus-within {
