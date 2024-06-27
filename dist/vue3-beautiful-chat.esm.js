@@ -69,7 +69,7 @@ function _sfc_render$m(_ctx, _cache) {
 }
 var MinimizeIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
 var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _withScopeId$2 = (n) => (pushScopeId("data-v-148ec2ac"), n = n(), popScopeId(), n);
+const _withScopeId$2 = (n) => (pushScopeId("data-v-75a37a54"), n = n(), popScopeId(), n);
 const _hoisted_1$m = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("img", {
   src: _imports_0,
   class: "sc-message--avatar-img"
@@ -129,7 +129,8 @@ const _sfc_main$m = Object.assign(__default__, {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", {
         class: "sc-header",
-        style: normalizeStyle({ background: __props.colors.header.bg, color: __props.colors.header.text })
+        style: normalizeStyle({ background: __props.colors.header.bg, color: __props.colors.header.text }),
+        onClick: _cache[2] || (_cache[2] = (...args) => _ctx.toggleMinimize && _ctx.toggleMinimize(...args))
       }, [
         createElementVNode("div", {
           class: normalizeClass(["sc-message--avatar", { "minimized": _ctx.minimized }]),
@@ -139,7 +140,7 @@ const _sfc_main$m = Object.assign(__default__, {
           class: "sc-header--minimize-button",
           onClick: _cache[0] || (_cache[0] = (...args) => _ctx.toggleMinimize && _ctx.toggleMinimize(...args))
         }, [
-          createVNode(MinimizeIconSvg)
+          createVNode(MinimizeIconSvg, { minimized: _ctx.minimized }, null, 8, ["minimized"])
         ]),
         _ctx.showCloseButton ? (openBlock(), createElementBlock("div", {
           key: 0,
@@ -152,7 +153,7 @@ const _sfc_main$m = Object.assign(__default__, {
     };
   }
 });
-var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-148ec2ac"]]);
+var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-75a37a54"]]);
 var IconBase_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$l = {
   props: {
