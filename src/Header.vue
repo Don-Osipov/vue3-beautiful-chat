@@ -1,10 +1,10 @@
 <template>
-  <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}"  @click="toggleMinimize">
+  <div class="sc-header" :style="{background: colors.header.bg, color: colors.header.text}" @click="toggleMinimize">
     <div class="sc-message--avatar" :class="{ 'minimized': minimized }" :style="{ opacity: minimized ? 1 : 0 }">
       <img src="./assets/boticon.svg" class="sc-message--avatar-img"/>
     </div>
-    <div class="sc-header--minimize-button" @click="toggleMinimize">
-      <MinimizeIconSvg :minimized="minimized"/>
+    <div class="sc-header--minimize-button" @click.stop="toggleMinimize">
+      <MinimizeIconSvg />
     </div>
     <div v-if="showCloseButton" class="sc-header--close-button" @click="$emit('close')">
       <CloseIconSvg/>

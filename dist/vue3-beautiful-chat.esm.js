@@ -1,4 +1,4 @@
-import { reactive, openBlock, createElementBlock, createElementVNode, normalizeStyle, normalizeClass, createVNode, createCommentVNode, pushScopeId, popScopeId, toDisplayString, renderSlot, resolveComponent, withCtx, createTextVNode, resolveDirective, withDirectives, createBlock, Fragment, renderList, vShow, withModifiers, nextTick, withScopeId, withKeys, mergeProps, ref, createApp, h } from "vue";
+import { reactive, openBlock, createElementBlock, createElementVNode, normalizeStyle, normalizeClass, withModifiers, createVNode, createCommentVNode, pushScopeId, popScopeId, toDisplayString, renderSlot, resolveComponent, withCtx, createTextVNode, resolveDirective, withDirectives, createBlock, Fragment, renderList, vShow, nextTick, withScopeId, withKeys, mergeProps, ref, createApp, h } from "vue";
 const store = {
   state: reactive({
     editMessage: null
@@ -69,7 +69,7 @@ function _sfc_render$m(_ctx, _cache) {
 }
 var MinimizeIconSvg = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$m]]);
 var Header_vue_vue_type_style_index_0_scoped_true_lang = "";
-const _withScopeId$2 = (n) => (pushScopeId("data-v-75a37a54"), n = n(), popScopeId(), n);
+const _withScopeId$2 = (n) => (pushScopeId("data-v-268318ee"), n = n(), popScopeId(), n);
 const _hoisted_1$m = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("img", {
   src: _imports_0,
   class: "sc-message--avatar-img"
@@ -138,9 +138,9 @@ const _sfc_main$m = Object.assign(__default__, {
         }, _hoisted_2$d, 6),
         createElementVNode("div", {
           class: "sc-header--minimize-button",
-          onClick: _cache[0] || (_cache[0] = (...args) => _ctx.toggleMinimize && _ctx.toggleMinimize(...args))
+          onClick: _cache[0] || (_cache[0] = withModifiers((...args) => _ctx.toggleMinimize && _ctx.toggleMinimize(...args), ["stop"]))
         }, [
-          createVNode(MinimizeIconSvg, { minimized: _ctx.minimized }, null, 8, ["minimized"])
+          createVNode(MinimizeIconSvg)
         ]),
         _ctx.showCloseButton ? (openBlock(), createElementBlock("div", {
           key: 0,
@@ -153,7 +153,7 @@ const _sfc_main$m = Object.assign(__default__, {
     };
   }
 });
-var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-75a37a54"]]);
+var Header = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-268318ee"]]);
 var IconBase_vue_vue_type_style_index_0_scoped_true_lang = "";
 const _sfc_main$l = {
   props: {
