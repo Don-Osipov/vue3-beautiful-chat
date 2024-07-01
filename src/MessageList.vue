@@ -158,6 +158,6 @@ export default {
   overflow-y: auto;
   background-size: 100%;
   padding: 40px 0px;
-  flex-grow: 1;
+  flex-grow: 1 !important;
 }
 </style>
