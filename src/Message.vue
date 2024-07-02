@@ -162,8 +162,8 @@ export default {
 }
 
 .sc-message--avatar {
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
   align-self: center;
   margin-right: 8px;
@@ -172,8 +172,8 @@ export default {
 }
 
 .sc-message--avatar-img {
-  height: 40px;  // Fixed height
-  width: 40px;   // Fixed width
+  height: 50px;  // Fixed height
+  width: 50px;   // Fixed width
   object-fit: cover;  // Maintain aspect ratio without distortion
   border-radius: 50%;  // Ensures the image is always circular
 }
