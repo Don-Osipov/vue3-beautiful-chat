@@ -338,6 +338,7 @@ export default {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  margin-top: -4px;
 }
 
 
@@ -349,7 +350,7 @@ export default {
   border-radius: 8px; /* 16px */
   border: 1px solid #d1d5db; /* Tailwind's gray-300 */
   background-color: #ffffff;
-  cursor: text;
+  cursor: text !important;
   margin-bottom: 1.5rem; 
   margin-top: .8rem; 
   box-sizing: border-box;
