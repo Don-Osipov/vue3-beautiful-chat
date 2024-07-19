@@ -271,8 +271,8 @@ export default {
 
 <style scoped>
 .sc-launcher {
-  width: 60px;
-  height: 60px;
+  width: 85px;
+  height: 85px;
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
@@ -288,16 +288,16 @@ export default {
   content: '';
   position: relative;
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   transition: box-shadow 0.2s ease-in-out;
 }
 
 .sc-launcher .sc-open-icon,
 .sc-launcher .sc-closed-icon {
-  width: 60px;
-  height: 60px;
+  width: 85px;
+  height: 85px;
   position: fixed;
   right: 25px;
   bottom: 25px;
@@ -306,8 +306,8 @@ export default {
 
 .sc-launcher .sc-closed-icon {
   transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
-  width: 60px;
-  height: 60px;
+  width: 85px;
+  height: 85px;
 }
 
 .sc-launcher .sc-open-icon {
